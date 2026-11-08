@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "reflection-translation-agent"
+version = "0.1.0"
+description = "A multilingual draft-review-revise translation workbench"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+dependencies = [
+  "gradio>=6,<7",
+  "httpx>=0.28,<1",
+  "pydantic>=2.10,<3",
+  "python-dotenv>=1,<2",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "ruff>=0.14,<1"]
+
+[project.scripts]
+translate-agent = "reflection_translation.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/reflection_translation"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "docs", "scripts", "README.md", "pyproject.toml", "uv.lock", "uv.toml", ".python-version", ".env.example", "LICENSE", "THIRD_PARTY_NOTICES.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+extend-exclude = [".uv-cache", ".venv", "artifacts", "dist"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = ["E501"]

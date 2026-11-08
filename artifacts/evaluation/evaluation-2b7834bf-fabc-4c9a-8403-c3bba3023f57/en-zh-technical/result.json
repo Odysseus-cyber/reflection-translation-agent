@@ -1,0 +1,141 @@
+{
+  "run_id": "752e111c-6694-4978-a8ee-1ee291564aca",
+  "created_at": "2026-11-03T01:17:33.865203Z",
+  "mode": "live",
+  "request": {
+    "text": "The cache expires after 30 minutes. A cache miss does not mean the record has been deleted; query the primary database before returning a not-found response.",
+    "source_lang": "English",
+    "target_lang": "中文",
+    "locale": "zh-CN",
+    "style": "严谨的开发者文档，保留否定与条件关系",
+    "glossary": {
+      "cache miss": "缓存未命中",
+      "primary database": "主数据库",
+      "cache": "缓存"
+    }
+  },
+  "backend": "ollama",
+  "model": "gemma3:1b",
+  "generation_settings": {
+    "temperature": 0.2,
+    "max_output_tokens": 4096,
+    "ollama_num_ctx": 16384
+  },
+  "status": "completed",
+  "initial_translation": "缓存过期时间为30分钟。缓存未命中并不意味着记录已被删除；在主数据库前检索后再返回未找到响应。",
+  "review": {
+    "accuracy": [],
+    "fluency": [],
+    "style": [],
+    "terminology": []
+  },
+  "revised_translation": "缓存过期时间为30分钟。缓存未命中并不意味着记录已被删除；在主数据库前检索后再返回未找到响应。",
+  "stages": [
+    {
+      "name": "initial",
+      "status": "completed",
+      "calls": [
+        {
+          "attempt": 1,
+          "elapsed_seconds": 0.82261,
+          "input_tokens": 291,
+          "output_tokens": 30,
+          "raw_output": "缓存过期时间为30分钟。缓存未命中并不意味着记录已被删除；在主数据库前检索后再返回未找到响应。\n",
+          "error": null
+        }
+      ],
+      "note": ""
+    },
+    {
+      "name": "review",
+      "status": "completed",
+      "calls": [
+        {
+          "attempt": 1,
+          "elapsed_seconds": 6.697519,
+          "input_tokens": 862,
+          "output_tokens": 19,
+          "raw_output": "{\"accuracy\": [], \"fluency\": [], \"style\": [], \"terminology\": []}",
+          "error": null
+        }
+      ],
+      "note": ""
+    },
+    {
+      "name": "revision",
+      "status": "skipped",
+      "calls": [],
+      "note": "审校未发现问题，无需修订；保留初译。"
+    }
+  ],
+  "error": null,
+  "rule_checks": {
+    "method": "术语按区分大小写的字面子串匹配，仅检查原文出现的术语；占位符按原样及出现次数比较。规则结果不是整体翻译质量评分。",
+    "initial": {
+      "terminology": {
+        "applicable": 3,
+        "matched": 3,
+        "terms": [
+          {
+            "source": "cache miss",
+            "target": "缓存未命中",
+            "matched": true,
+            "target_occurrences": 1
+          },
+          {
+            "source": "primary database",
+            "target": "主数据库",
+            "matched": true,
+            "target_occurrences": 1
+          },
+          {
+            "source": "cache",
+            "target": "缓存",
+            "matched": true,
+            "target_occurrences": 2
+          }
+        ]
+      },
+      "placeholders": {
+        "expected": {},
+        "found": {},
+        "missing": {},
+        "extra": {},
+        "preserved": true
+      }
+    },
+    "revised": {
+      "terminology": {
+        "applicable": 3,
+        "matched": 3,
+        "terms": [
+          {
+            "source": "cache miss",
+            "target": "缓存未命中",
+            "matched": true,
+            "target_occurrences": 1
+          },
+          {
+            "source": "primary database",
+            "target": "主数据库",
+            "matched": true,
+            "target_occurrences": 1
+          },
+          {
+            "source": "cache",
+            "target": "缓存",
+            "matched": true,
+            "target_occurrences": 2
+          }
+        ]
+      },
+      "placeholders": {
+        "expected": {},
+        "found": {},
+        "missing": {},
+        "extra": {},
+        "preserved": true
+      }
+    }
+  }
+}

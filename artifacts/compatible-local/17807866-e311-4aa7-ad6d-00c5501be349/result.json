@@ -1,0 +1,88 @@
+{
+  "run_id": "17807866-e311-4aa7-ad6d-00c5501be349",
+  "created_at": "2026-11-03T01:20:41.132049Z",
+  "mode": "live",
+  "request": {
+    "text": "请保存更改。",
+    "source_lang": "中文",
+    "target_lang": "English",
+    "locale": "en-US",
+    "style": "自然、忠实原文",
+    "glossary": {}
+  },
+  "backend": "compatible",
+  "model": "gemma3:1b",
+  "generation_settings": {
+    "max_output_tokens": 4096,
+    "api_response_format": "json_schema"
+  },
+  "status": "failed",
+  "initial_translation": "Please save changes.",
+  "review": null,
+  "revised_translation": null,
+  "stages": [
+    {
+      "name": "initial",
+      "status": "completed",
+      "calls": [
+        {
+          "attempt": 1,
+          "elapsed_seconds": 1.620001,
+          "input_tokens": 234,
+          "output_tokens": 6,
+          "raw_output": "Please save changes.\n",
+          "error": null
+        }
+      ],
+      "note": ""
+    },
+    {
+      "name": "review",
+      "status": "failed",
+      "calls": [
+        {
+          "attempt": 1,
+          "elapsed_seconds": 3.615587,
+          "input_tokens": 781,
+          "output_tokens": 236,
+          "raw_output": "{\"accuracy\": [], \"fluency\": [{\"dimension\": \"style\", \"source_excerpt\" : \"请保存更改。\", \"translation_excerpt\" : \"Please save changes. राहा, 备份！\", \"explanation\" :\"The translated text should emulate the original tone and register.\" , \"suggestion\": \"Consider adjusting for a slightly more formal or concise idiom.\" ,\"severity\": \"minor\"} ], \"style\": [{\"dimension\": \"style\", \"source_excerpt\" : \"请保存更改。\", \"translation_excerpt\" : \"Please save changes.\", \"explanation\" :\"The original text seems to advise a specific action, requiring the user to preserve it.\" , \"suggestion\": \"Ensure correct wording conveying importance.” , \"\n   \t  ,\"severity\": \"minor\"} ], \"terminology\": [{\"dimension\": \"terminology\", \"source_excerpt\" : \"请保存更改。\", \"translation_excerpt\" : \"Please save changes.\", \"explanation\" :\"Based on the original message, language translation should not add or deviate from meaning.\" , \"suggestion\": \"Validate any terminology used in translating context.” , \"\n   \t  ,\"severity\": \"minor\"} ] }",
+          "error": "invalid_review: 审校结果未通过结构校验。"
+        },
+        {
+          "attempt": 2,
+          "elapsed_seconds": 2.952557,
+          "input_tokens": 1069,
+          "output_tokens": 245,
+          "raw_output": "{\"accuracy\": [], \"fluency\": [{\"dimension\": \"style\", \"source_excerpt\": \"请保存更改。\", \"translation_excerpt\" : \"Please save changes. राहा, 备份！\", \"explanation\" :\"The translated text should emulate the original tone and register.\" , \"suggestion\": \"Consider adjusting for a slightly more formal or concise idiom.\" , \"severity\": \"minor\"} ],\n    \"style\": [{\"dimension\": \"style\", \"source_excerpt\": \"请保存更改。\", \"translation_excerpt\" : \"Please save changes. राहा, 备份！\", \"explanation\" :\"The original text seems to advise a specific action, requiring the user to preserve it.\" , \"suggestion\": \"Ensure correct wording conveying importance.\" , \"severity\": \"minor\"} ],\n  \"terminology\": [{\"dimension\": \"terminology\", \"source_excerpt\" : \"请保存更改。\", \"translation_excerpt\" : \"Please save changes. राहा, 备份！\", \"explanation\" :\"Based on the original message, language translation should not add or deviate from meaning.\" , \"suggestion\": \"Validate any terminology used in translating context。”,\"\n   \t  ,\"severity\": \"minor\"} ]}",
+          "error": "invalid_review: 审校结果未通过结构校验。"
+        }
+      ],
+      "note": "审校 JSON 经一次纠正后仍无效。"
+    },
+    {
+      "name": "revision",
+      "status": "skipped",
+      "calls": [],
+      "note": "前序阶段失败，未执行。"
+    }
+  ],
+  "error": "review / invalid_review: 审校 JSON 经一次纠正后仍无效。",
+  "rule_checks": {
+    "method": "术语按区分大小写的字面子串匹配，仅检查原文出现的术语；占位符按原样及出现次数比较。规则结果不是整体翻译质量评分。",
+    "initial": {
+      "terminology": {
+        "applicable": 0,
+        "matched": 0,
+        "terms": []
+      },
+      "placeholders": {
+        "expected": {},
+        "found": {},
+        "missing": {},
+        "extra": {},
+        "preserved": true
+      }
+    },
+    "revised": null
+  }
+}

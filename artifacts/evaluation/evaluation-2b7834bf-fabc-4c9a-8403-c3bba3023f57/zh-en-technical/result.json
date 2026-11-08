@@ -1,0 +1,149 @@
+{
+  "run_id": "e678d46f-9c51-4b53-a27a-8644bc3a5b68",
+  "created_at": "2026-11-03T01:16:41.872377Z",
+  "mode": "live",
+  "request": {
+    "text": "客户端应为每次写入请求生成幂等键。若请求超时，可使用相同的幂等键重试，避免重复创建订单。请勿将访问令牌写入日志。",
+    "source_lang": "中文",
+    "target_lang": "English",
+    "locale": "en-US",
+    "style": "准确、简洁的开发者文档",
+    "glossary": {
+      "幂等键": "idempotency key",
+      "访问令牌": "access token",
+      "客户端": "client"
+    }
+  },
+  "backend": "ollama",
+  "model": "gemma3:1b",
+  "generation_settings": {
+    "temperature": 0.2,
+    "max_output_tokens": 4096,
+    "ollama_num_ctx": 16384
+  },
+  "status": "completed",
+  "initial_translation": "The client should generate an idempotent key for each request. If the request times out, retry with the same idempotency key to avoid creating duplicate orders. Do not write access tokens to logs.",
+  "review": {
+    "accuracy": [],
+    "fluency": [],
+    "style": [],
+    "terminology": []
+  },
+  "revised_translation": "The client should generate an idempotent key for each request. If the request times out, retry with the same idempotency key to avoid creating duplicate orders. Do not write access tokens to logs.",
+  "stages": [
+    {
+      "name": "initial",
+      "status": "completed",
+      "calls": [
+        {
+          "attempt": 1,
+          "elapsed_seconds": 0.743127,
+          "input_tokens": 292,
+          "output_tokens": 39,
+          "raw_output": "The client should generate an idempotent key for each request. If the request times out, retry with the same idempotency key to avoid creating duplicate orders. Do not write access tokens to logs.",
+          "error": null
+        }
+      ],
+      "note": ""
+    },
+    {
+      "name": "review",
+      "status": "completed",
+      "calls": [
+        {
+          "attempt": 1,
+          "elapsed_seconds": 6.540635,
+          "input_tokens": 873,
+          "output_tokens": 566,
+          "raw_output": "{\"accuracy\": [\n    {\"dimension\": \"terminology\", \"source_excerpt\": \"客户端应为每次写入请求生成幂等键。若请求超时，可使用相同的幂等键重试，避免重复创建订单。\", \"translation_excerpt\": \"The client should generate an idempotent key for each request. If the request times out, retry with the same idempotency key to avoid creating duplicate orders.\\\"}, {\"\n    ,\"explanation\": \"缺少对幂等键的明确说明。需要更详细地解释为什么需要重试请求。\"\n  , \"suggestion\": \"添加关于幂等键的更多细节，例如重试次数和超时时间。\"\n  , \"severity\": \"minor\"}\n],\n\"fluency\": [\n    {\"dimension\": \"terminology\", \"source_excerpt\": \"客户端应为每次写入请求生成幂等键。若请求超时，可使用相同的幂等键重试，避免重复创建订单。\", \"translation_excerpt\": \"The client should generate an idempotent key for each request. If the request times out, retry with the same idempotency key to avoid creating duplicate orders.\\\"}, {\"\n    ,\"explanation\": \"语法稍有不自然。建议调整语句表达方式。\"\n  , \"suggestion\": \"考虑使用更自然的语言，例如‘重复执行’而不是‘重试’。\"\n  , \"severity\": \"minor\"}\n],\n\"style\": [\n    {\"dimension\": \"terminology\", \"source_excerpt\": \"客户端应为每次写入请求生成幂等键。若请求超时，可使用相同的幂等键重试，避免重复创建订单。\", \"translation_excerpt\": \"The client should generate an idempotent key for each request. If the request times out, retry with the same idempotency key to avoid creating duplicate orders.\\\"}, {\"\n    ,\"explanation\": \"风格略显正式。可以考虑更口语化一些。\"\n  , \"suggestion\": \"建议使用更简洁的表达方式，避免冗余。\"\n  , \"severity\": \"minor\"}\n],\n\"terminology\": [\n    {\"dimension\": \"terminology\", \"source_excerpt\": \"客户端应为每次写入请求生成幂等键。若请求超时，可使用相同的幂等键重试，避免重复创建订单。\", \"translation_excerpt\": \"The client should generate an idempotent key for each request. If the request times out, retry with the same idempotency key to avoid creating duplicate orders.\\\"}, {\"\n    ,\"explanation\": \"术语翻译略有差异。建议使用更常见的术语。\"\n  , \"suggestion\": \"考虑将‘重复’改为‘重试’，更加简洁。\"\n  , \"severity\": \"minor\"}\n]\n}",
+          "error": "invalid_review: 审校结果未通过结构校验。"
+        },
+        {
+          "attempt": 2,
+          "elapsed_seconds": 0.826401,
+          "input_tokens": 1530,
+          "output_tokens": 19,
+          "raw_output": "{\"accuracy\": [], \"fluency\": [], \"style\": [],\"terminology\": []}",
+          "error": null
+        }
+      ],
+      "note": "结构已纠正。"
+    },
+    {
+      "name": "revision",
+      "status": "skipped",
+      "calls": [],
+      "note": "审校未发现问题，无需修订；保留初译。"
+    }
+  ],
+  "error": null,
+  "rule_checks": {
+    "method": "术语按区分大小写的字面子串匹配，仅检查原文出现的术语；占位符按原样及出现次数比较。规则结果不是整体翻译质量评分。",
+    "initial": {
+      "terminology": {
+        "applicable": 3,
+        "matched": 3,
+        "terms": [
+          {
+            "source": "幂等键",
+            "target": "idempotency key",
+            "matched": true,
+            "target_occurrences": 1
+          },
+          {
+            "source": "访问令牌",
+            "target": "access token",
+            "matched": true,
+            "target_occurrences": 1
+          },
+          {
+            "source": "客户端",
+            "target": "client",
+            "matched": true,
+            "target_occurrences": 1
+          }
+        ]
+      },
+      "placeholders": {
+        "expected": {},
+        "found": {},
+        "missing": {},
+        "extra": {},
+        "preserved": true
+      }
+    },
+    "revised": {
+      "terminology": {
+        "applicable": 3,
+        "matched": 3,
+        "terms": [
+          {
+            "source": "幂等键",
+            "target": "idempotency key",
+            "matched": true,
+            "target_occurrences": 1
+          },
+          {
+            "source": "访问令牌",
+            "target": "access token",
+            "matched": true,
+            "target_occurrences": 1
+          },
+          {
+            "source": "客户端",
+            "target": "client",
+            "matched": true,
+            "target_occurrences": 1
+          }
+        ]
+      },
+      "placeholders": {
+        "expected": {},
+        "found": {},
+        "missing": {},
+        "extra": {},
+        "preserved": true
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "run_id": "62a2a993-7cfa-4325-ad69-6457f0f0ead8",
+  "created_at": "2026-11-03T01:18:03.237069Z",
+  "mode": "live",
+  "request": {
+    "text": "毎日の支出をかんたんに記録。カテゴリ別の集計で、お金の使い方を振り返れます。まずは無料プランから始めましょう。",
+    "source_lang": "日本語",
+    "target_lang": "中文",
+    "locale": "zh-CN",
+    "style": "轻松自然的产品介绍，避免夸大收益",
+    "glossary": {
+      "カテゴリ": "类别",
+      "無料プラン": "免费方案"
+    }
+  },
+  "backend": "ollama",
+  "model": "gemma3:1b",
+  "generation_settings": {
+    "temperature": 0.2,
+    "max_output_tokens": 4096,
+    "ollama_num_ctx": 16384
+  },
+  "status": "completed",
+  "initial_translation": "每天记录你的每日开销。使用不同的类别来查看钱的用途。从免费计划开始吧！",
+  "review": {
+    "accuracy": [],
+    "fluency": [],
+    "style": [],
+    "terminology": []
+  },
+  "revised_translation": "每天记录你的每日开销。使用不同的类别来查看钱的用途。从免费计划开始吧！",
+  "stages": [
+    {
+      "name": "initial",
+      "status": "completed",
+      "calls": [
+        {
+          "attempt": 1,
+          "elapsed_seconds": 0.655363,
+          "input_tokens": 275,
+          "output_tokens": 24,
+          "raw_output": "每天记录你的每日开销。使用不同的类别来查看钱的用途。从免费计划开始吧！\n",
+          "error": null
+        }
+      ],
+      "note": ""
+    },
+    {
+      "name": "review",
+      "status": "completed",
+      "calls": [
+        {
+          "attempt": 1,
+          "elapsed_seconds": 0.625192,
+          "input_tokens": 840,
+          "output_tokens": 24,
+          "raw_output": "{\"accuracy\": [], \"fluency\": [ ], \"style\": [ ], \"terminology\": [ ]}\n",
+          "error": null
+        }
+      ],
+      "note": ""
+    },
+    {
+      "name": "revision",
+      "status": "skipped",
+      "calls": [],
+      "note": "审校未发现问题，无需修订；保留初译。"
+    }
+  ],
+  "error": null,
+  "rule_checks": {
+    "method": "术语按区分大小写的字面子串匹配，仅检查原文出现的术语；占位符按原样及出现次数比较。规则结果不是整体翻译质量评分。",
+    "initial": {
+      "terminology": {
+        "applicable": 2,
+        "matched": 1,
+        "terms": [
+          {
+            "source": "カテゴリ",
+            "target": "类别",
+            "matched": true,
+            "target_occurrences": 1
+          },
+          {
+            "source": "無料プラン",
+            "target": "免费方案",
+            "matched": false,
+            "target_occurrences": 0
+          }
+        ]
+      },
+      "placeholders": {
+        "expected": {},
+        "found": {},
+        "missing": {},
+        "extra": {},
+        "preserved": true
+      }
+    },
+    "revised": {
+      "terminology": {
+        "applicable": 2,
+        "matched": 1,
+        "terms": [
+          {
+            "source": "カテゴリ",
+            "target": "类别",
+            "matched": true,
+            "target_occurrences": 1
+          },
+          {
+            "source": "無料プラン",
+            "target": "免费方案",
+            "matched": false,
+            "target_occurrences": 0
+          }
+        ]
+      },
+      "placeholders": {
+        "expected": {},
+        "found": {},
+        "missing": {},
+        "extra": {},
+        "preserved": true
+      }
+    }
+  }
+}

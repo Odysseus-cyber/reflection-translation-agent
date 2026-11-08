@@ -1,0 +1,115 @@
+{
+  "run_id": "11e8ea48-9c49-4cf7-a80f-4c255856f4b7",
+  "created_at": "2026-11-03T01:18:18.671096Z",
+  "mode": "live",
+  "request": {
+    "text": "请在账户设置中选择你喜欢的颜色，并将发货地址设为办公室地址。新版本优化了收藏夹，方便你整理常用内容。",
+    "source_lang": "中文",
+    "target_lang": "English",
+    "locale": "en-US",
+    "style": "友好、简洁的产品说明；采用目标地区自然的拼写与用词",
+    "glossary": {
+      "账户设置": "account settings"
+    }
+  },
+  "backend": "ollama",
+  "model": "gemma3:1b",
+  "generation_settings": {
+    "temperature": 0.2,
+    "max_output_tokens": 4096,
+    "ollama_num_ctx": 16384
+  },
+  "status": "completed",
+  "initial_translation": "Please select your preferred color in the account settings and set your shipping address to your office address. The latest version has improved the bookmark feature, making it easier for you to organize frequently used content.",
+  "review": {
+    "accuracy": [],
+    "fluency": [],
+    "style": [],
+    "terminology": []
+  },
+  "revised_translation": "Please select your preferred color in the account settings and set your shipping address to your office address. The latest version has improved the bookmark feature, making it easier for you to organize frequently used content.",
+  "stages": [
+    {
+      "name": "initial",
+      "status": "completed",
+      "calls": [
+        {
+          "attempt": 1,
+          "elapsed_seconds": 0.795524,
+          "input_tokens": 279,
+          "output_tokens": 40,
+          "raw_output": "Please select your preferred color in the account settings and set your shipping address to your office address. The latest version has improved the bookmark feature, making it easier for you to organize frequently used content.",
+          "error": null
+        }
+      ],
+      "note": ""
+    },
+    {
+      "name": "review",
+      "status": "completed",
+      "calls": [
+        {
+          "attempt": 1,
+          "elapsed_seconds": 0.645205,
+          "input_tokens": 861,
+          "output_tokens": 19,
+          "raw_output": "{\"accuracy\": [], \"fluency\": [], \"style\": [], \"terminology\": []}",
+          "error": null
+        }
+      ],
+      "note": ""
+    },
+    {
+      "name": "revision",
+      "status": "skipped",
+      "calls": [],
+      "note": "审校未发现问题，无需修订；保留初译。"
+    }
+  ],
+  "error": null,
+  "rule_checks": {
+    "method": "术语按区分大小写的字面子串匹配，仅检查原文出现的术语；占位符按原样及出现次数比较。规则结果不是整体翻译质量评分。",
+    "initial": {
+      "terminology": {
+        "applicable": 1,
+        "matched": 1,
+        "terms": [
+          {
+            "source": "账户设置",
+            "target": "account settings",
+            "matched": true,
+            "target_occurrences": 1
+          }
+        ]
+      },
+      "placeholders": {
+        "expected": {},
+        "found": {},
+        "missing": {},
+        "extra": {},
+        "preserved": true
+      }
+    },
+    "revised": {
+      "terminology": {
+        "applicable": 1,
+        "matched": 1,
+        "terms": [
+          {
+            "source": "账户设置",
+            "target": "account settings",
+            "matched": true,
+            "target_occurrences": 1
+          }
+        ]
+      },
+      "placeholders": {
+        "expected": {},
+        "found": {},
+        "missing": {},
+        "extra": {},
+        "preserved": true
+      }
+    }
+  }
+}

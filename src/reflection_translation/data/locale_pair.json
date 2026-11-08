@@ -1,0 +1,4 @@
+[
+  {"id":"locale-en-us","category":"英美地区对照","request":{"text":"请在账户设置中选择你喜欢的颜色，并将发货地址设为办公室地址。新版本优化了收藏夹，方便你整理常用内容。","source_lang":"中文","target_lang":"English","locale":"en-US","style":"友好、简洁的产品说明；采用目标地区自然的拼写与用词","glossary":{"账户设置":"account settings"}}},
+  {"id":"locale-en-gb","category":"英美地区对照","request":{"text":"请在账户设置中选择你喜欢的颜色，并将发货地址设为办公室地址。新版本优化了收藏夹，方便你整理常用内容。","source_lang":"中文","target_lang":"English","locale":"en-GB","style":"友好、简洁的产品说明；采用目标地区自然的拼写与用词","glossary":{"账户设置":"account settings"}}}
+]

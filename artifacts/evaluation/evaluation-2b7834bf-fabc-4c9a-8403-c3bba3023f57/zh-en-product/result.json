@@ -1,0 +1,149 @@
+{
+  "run_id": "242d7858-6016-4d19-b042-1d3245df9d77",
+  "created_at": "2026-11-03T01:16:34.032403Z",
+  "mode": "live",
+  "request": {
+    "text": "欢迎使用云笺。开启离线模式后，你仍可编辑笔记；重新联网时，修改会自动同步到工作区。立即开始你的 14 天免费试用。",
+    "source_lang": "中文",
+    "target_lang": "English",
+    "locale": "en-US",
+    "style": "简洁、友好的产品文案，不夸大功能",
+    "glossary": {
+      "云笺": "CloudNote",
+      "离线模式": "offline mode",
+      "工作区": "workspace"
+    }
+  },
+  "backend": "ollama",
+  "model": "gemma3:1b",
+  "generation_settings": {
+    "temperature": 0.2,
+    "max_output_tokens": 4096,
+    "ollama_num_ctx": 16384
+  },
+  "status": "completed",
+  "initial_translation": "Use CloudNote offline mode to edit your notes; sync changes when you reconnect. Start your free trial now!",
+  "review": {
+    "accuracy": [],
+    "fluency": [],
+    "style": [],
+    "terminology": []
+  },
+  "revised_translation": "Use CloudNote offline mode to edit your notes; sync changes when you reconnect. Start your free trial now!",
+  "stages": [
+    {
+      "name": "initial",
+      "status": "completed",
+      "calls": [
+        {
+          "attempt": 1,
+          "elapsed_seconds": 0.688118,
+          "input_tokens": 299,
+          "output_tokens": 23,
+          "raw_output": "Use CloudNote offline mode to edit your notes; sync changes when you reconnect. Start your free trial now!",
+          "error": null
+        }
+      ],
+      "note": ""
+    },
+    {
+      "name": "review",
+      "status": "completed",
+      "calls": [
+        {
+          "attempt": 1,
+          "elapsed_seconds": 4.810939,
+          "input_tokens": 864,
+          "output_tokens": 436,
+          "raw_output": "{\"accuracy\": [\n  {\n    \"dimension\": \"terminology\",\n    \"source_excerpt\": \"CloudNote\",\n    \"translation_excerpt\": \"CloudNote\"\n  ,\n  \"explanation\": \"The term 'CloudNote' is used in the source text. It’s a common name for this application.\"\n  ,\n  \"suggestion\": \"Verify consistency with established terminology within the CloudNote ecosystem.\"\n  ,\n  \"severity\": \"minor\"\n}\n]\n,\"fluency\": [\n  {\n    \"dimension\": \"style\",\n    \"source_excerpt\": \"Use CloudNote offline mode to edit your notes; sync changes when you reconnect. Start your free trial now!\"\n  ,\n  \"translation_excerpt\": \"Start your free trial now!\",\n  \"explanation\": \"The language is generally clear and easy to understand.\"\n  ,\n  \"suggestion\": \"Minor adjustment needed for smoother flow in the target audience's communication style.\"\n  ,\n  \"severity\": \"minor\"\n}\n]\n,\"style\": [\n  {\n    \"dimension\": \"terminology\",\n    \"source_excerpt\": \"CloudNote\",\n    \"translation_excerpt\": \"CloudNote\"\n  ,\n  \"explanation\": \"The term 'CloudNote' is used in the source text. It’s a common name for this application.\"\n  ,\n  \"suggestion\": \"Verify consistency with established terminology within the CloudNote ecosystem.\"\n  ,\n  \"severity\": \"minor\"\n}\n]\n,\"terminology\": [\n  {\n    \"dimension\": \"terminology\",\n    \"source_excerpt\": \"CloudNote\",\n    \"translation_excerpt\": \"CloudNote\"\n   ,\n  \"explanation\": \"The term 'CloudNote' is used in the source text. It’s a common name for this application.\"\n  ,\n  \"suggestion\": \"Verify consistency with established terminology within the CloudNote ecosystem.\"\n  ,\n  \"severity\": \"minor\"\n}\n]\n}",
+          "error": "invalid_review: 审校结果未通过结构校验。"
+        },
+        {
+          "attempt": 2,
+          "elapsed_seconds": 0.56163,
+          "input_tokens": 1395,
+          "output_tokens": 18,
+          "raw_output": "{\"accuracy\": [], \"fluency\": [], \"style\": [],\"terminology\":[]}",
+          "error": null
+        }
+      ],
+      "note": "结构已纠正。"
+    },
+    {
+      "name": "revision",
+      "status": "skipped",
+      "calls": [],
+      "note": "审校未发现问题，无需修订；保留初译。"
+    }
+  ],
+  "error": null,
+  "rule_checks": {
+    "method": "术语按区分大小写的字面子串匹配，仅检查原文出现的术语；占位符按原样及出现次数比较。规则结果不是整体翻译质量评分。",
+    "initial": {
+      "terminology": {
+        "applicable": 3,
+        "matched": 2,
+        "terms": [
+          {
+            "source": "云笺",
+            "target": "CloudNote",
+            "matched": true,
+            "target_occurrences": 1
+          },
+          {
+            "source": "离线模式",
+            "target": "offline mode",
+            "matched": true,
+            "target_occurrences": 1
+          },
+          {
+            "source": "工作区",
+            "target": "workspace",
+            "matched": false,
+            "target_occurrences": 0
+          }
+        ]
+      },
+      "placeholders": {
+        "expected": {},
+        "found": {},
+        "missing": {},
+        "extra": {},
+        "preserved": true
+      }
+    },
+    "revised": {
+      "terminology": {
+        "applicable": 3,
+        "matched": 2,
+        "terms": [
+          {
+            "source": "云笺",
+            "target": "CloudNote",
+            "matched": true,
+            "target_occurrences": 1
+          },
+          {
+            "source": "离线模式",
+            "target": "offline mode",
+            "matched": true,
+            "target_occurrences": 1
+          },
+          {
+            "source": "工作区",
+            "target": "workspace",
+            "matched": false,
+            "target_occurrences": 0
+          }
+        ]
+      },
+      "placeholders": {
+        "expected": {},
+        "found": {},
+        "missing": {},
+        "extra": {},
+        "preserved": true
+      }
+    }
+  }
+}

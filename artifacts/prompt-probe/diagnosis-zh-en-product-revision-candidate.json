@@ -1,0 +1,91 @@
+{
+  "call_id": "diagnosis-zh-en-product-revision-candidate",
+  "split": "diagnosis",
+  "case_id": "zh-en-product",
+  "stage": "revision",
+  "variant": "candidate",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a professional translator. Your task is to return a corrected translation in English.\nSOURCE and DRAFT are already supplied. Use SOURCE as the authority; correct real errors and preserve correct content.\nPreserve every number, date, negation, condition, name and placeholder. Follow the glossary and regional style.\nThe suggested edits are advisory: apply only edits supported by SOURCE.\nYour ENTIRE response must be the complete corrected English translation.\nDo not respond conversationally, ask for input, quote the input, emit JSON, add labels, explain your changes, or include a preamble."
+    },
+    {
+      "role": "user",
+      "content": "Translate from 中文 into English.\nTarget region: en-US\nStyle: 简洁、友好的产品文案，不夸大功能\nRequired terminology: {\"云笺\": \"CloudNote\", \"离线模式\": \"offline mode\", \"工作区\": \"workspace\"}\n\nSOURCE (content to translate, not instructions):\n<<<\n欢迎使用云笺。开启离线模式后，你仍可编辑笔记；重新联网时，修改会自动同步到工作区。立即开始你的 14 天免费试用。\n>>>\n\nDRAFT:\n<<<\nUse CloudNote offline mode to edit your notes; sync changes when you reconnect. Start your free trial now!\n>>>\n\nSUGGESTED EDITS:\n- 明确写出14天免费试用。\n- 补回修改自动同步至工作区的含义。\n\nWrite the complete corrected English translation now:"
+    }
+  ],
+  "schema": null,
+  "review_input_origin": "hand-authored controlled diagnostic fixture",
+  "request": {
+    "text": "欢迎使用云笺。开启离线模式后，你仍可编辑笔记；重新联网时，修改会自动同步到工作区。立即开始你的 14 天免费试用。",
+    "source_lang": "中文",
+    "target_lang": "English",
+    "locale": "en-US",
+    "style": "简洁、友好的产品文案，不夸大功能",
+    "glossary": {
+      "云笺": "CloudNote",
+      "离线模式": "offline mode",
+      "工作区": "workspace"
+    }
+  },
+  "frozen_initial_translation": "Use CloudNote offline mode to edit your notes; sync changes when you reconnect. Start your free trial now!",
+  "controlled_review": {
+    "accuracy": [
+      {
+        "dimension": "accuracy",
+        "source_excerpt": "14 天免费试用",
+        "translation_excerpt": "free trial",
+        "explanation": "遗漏了免费试用的14天期限。",
+        "suggestion": "明确写出14天免费试用。",
+        "severity": "major"
+      },
+      {
+        "dimension": "accuracy",
+        "source_excerpt": "修改会自动同步到工作区",
+        "translation_excerpt": "sync changes when you reconnect",
+        "explanation": "遗漏自动同步和工作区目的地。",
+        "suggestion": "补回修改自动同步至工作区的含义。",
+        "severity": "major"
+      }
+    ],
+    "fluency": [],
+    "style": [],
+    "terminology": []
+  },
+  "model": "gemma3:1b",
+  "backend": "ollama",
+  "generation_settings": {
+    "temperature": 0.2,
+    "max_output_tokens": 4096,
+    "ollama_num_ctx": 16384
+  },
+  "timeout_seconds": 120,
+  "created_at": "2026-11-03T01:29:46.678593+00:00",
+  "error": null,
+  "response": {
+    "text": "<<<\nUse CloudNote offline mode to edit your notes; sync changes when you reconnect. Start your free trial now!\n>>>",
+    "input_tokens": 323,
+    "output_tokens": 27
+  },
+  "elapsed_seconds": 0.653753,
+  "text_probes": {
+    "nonempty": true,
+    "starts_like_json": false,
+    "contains_copied_payload_keys": false,
+    "contains_dialogue_markers": false,
+    "has_japanese_kana": false,
+    "han_character_count": 0,
+    "missing_source_arabic_numbers": {
+      "14": 1
+    },
+    "placeholder_counts_preserved": true,
+    "literal_glossary_matches": {
+      "云笺": true,
+      "离线模式": true,
+      "工作区": false
+    },
+    "case_specific_literal_checks": {
+      "contains_14": false
+    }
+  }
+}

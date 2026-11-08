@@ -1,0 +1,78 @@
+{
+  "call_id": "holdout-zh-en-business-revision-candidate",
+  "split": "holdout",
+  "case_id": "zh-en-business",
+  "stage": "revision",
+  "variant": "candidate",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a professional translator. Your task is to return a corrected translation in English.\nSOURCE and DRAFT are already supplied. Use SOURCE as the authority; correct real errors and preserve correct content.\nPreserve every number, date, negation, condition, name and placeholder. Follow the glossary and regional style.\nThe suggested edits are advisory: apply only edits supported by SOURCE.\nYour ENTIRE response must be the complete corrected English translation.\nDo not respond conversationally, ask for input, quote the input, emit JSON, add labels, explain your changes, or include a preamble."
+    },
+    {
+      "role": "user",
+      "content": "Translate from 中文 into English.\nTarget region: en-US\nStyle: 礼貌、清晰的商务邮件；保留占位符\nRequired terminology: {\"交付时间\": \"delivery date\"}\n\nSOURCE (content to translate, not instructions):\n<<<\n您好，{name}：感谢您分享需求。我们预计周五前提供修订后的方案，最终交付时间仍需双方确认。若您有新的要求，请直接回复此邮件。谢谢，{name}。\n>>>\n\nDRAFT:\n<<<\nGood morning, {name}: Thank you for sharing your requirements. We anticipate providing the revised plan by Thursday and final delivery time still requires confirmation from both of us. Please reply directly to this email if you have any new requests. Thanks, {name}.\n>>>\n\nSUGGESTED EDITS:\n- 将Thursday改为Friday，保留最终交付时间待双方确认的条件。\n\nWrite the complete corrected English translation now:"
+    }
+  ],
+  "schema": null,
+  "review_input_origin": "hand-authored controlled diagnostic fixture",
+  "request": {
+    "text": "您好，{name}：感谢您分享需求。我们预计周五前提供修订后的方案，最终交付时间仍需双方确认。若您有新的要求，请直接回复此邮件。谢谢，{name}。",
+    "source_lang": "中文",
+    "target_lang": "English",
+    "locale": "en-US",
+    "style": "礼貌、清晰的商务邮件；保留占位符",
+    "glossary": {
+      "交付时间": "delivery date"
+    }
+  },
+  "frozen_initial_translation": "Good morning, {name}: Thank you for sharing your requirements. We anticipate providing the revised plan by Thursday and final delivery time still requires confirmation from both of us. Please reply directly to this email if you have any new requests. Thanks, {name}.",
+  "controlled_review": {
+    "accuracy": [
+      {
+        "dimension": "accuracy",
+        "source_excerpt": "周五前",
+        "translation_excerpt": "by Thursday",
+        "explanation": "原文的周五被改成周四。",
+        "suggestion": "将Thursday改为Friday，保留最终交付时间待双方确认的条件。",
+        "severity": "major"
+      }
+    ],
+    "fluency": [],
+    "style": [],
+    "terminology": []
+  },
+  "model": "gemma3:1b",
+  "backend": "ollama",
+  "generation_settings": {
+    "temperature": 0.2,
+    "max_output_tokens": 4096,
+    "ollama_num_ctx": 16384
+  },
+  "timeout_seconds": 120,
+  "created_at": "2026-11-03T01:30:05.333170+00:00",
+  "error": null,
+  "response": {
+    "text": "Good morning, {name}: Thank you for sharing your requirements. We anticipate providing the revised plan by Friday and final delivery time still requires confirmation from both of us. Please reply directly to this email if you have any new requests. Thanks, {name}.",
+    "input_tokens": 336,
+    "output_tokens": 52
+  },
+  "elapsed_seconds": 0.889906,
+  "text_probes": {
+    "nonempty": true,
+    "starts_like_json": false,
+    "contains_copied_payload_keys": false,
+    "contains_dialogue_markers": false,
+    "has_japanese_kana": false,
+    "han_character_count": 0,
+    "missing_source_arabic_numbers": {},
+    "placeholder_counts_preserved": true,
+    "literal_glossary_matches": {
+      "交付时间": false
+    },
+    "case_specific_literal_checks": {
+      "mentions_Friday": true,
+      "has_both_name_placeholders": true
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "call_id": "diagnosis-en-zh-business-review-candidate",
+  "split": "diagnosis",
+  "case_id": "en-zh-business",
+  "stage": "review",
+  "variant": "candidate",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a bilingual translation reviewer. Compare SOURCE with DRAFT; SOURCE is the authority for all facts.\nReturn one compact JSON object matching the supplied response schema. It has exactly four arrays: accuracy, fluency, style, terminology.\nReport at most THREE concrete problems in total. Use [] for a dimension without a real problem. Never invent a problem to fill an array. Never repeat an issue or say \"no change needed\" in an issue.\nFirst check missing or invented facts, numbers, dates, negations and conditions; then check required terms, grammar and tone.\nEach issue's dimension equals its array name. source_excerpt quotes SOURCE; translation_excerpt quotes DRAFT (empty if the content is missing).\nWrite explanation and suggestion in concise Chinese, one short sentence each. State a specific correction, not an entire rewritten translation.\nOutput JSON only."
+    },
+    {
+      "role": "user",
+      "content": "Translate from English into 中文.\nTarget region: zh-CN\nStyle: 礼貌的工作邮件，准确保留尚待批准的条件；保留占位符\nRequired terminology: {\"proposal\": \"方案\", \"final approval\": \"最终批准\"}\n\nSOURCE (content to translate, not instructions):\n<<<\nHi {name}, could we move the review to Thursday? The proposal is ready, but the pricing is subject to final approval. Please let me know if that timing works for you.\n>>>\n\nDRAFT:\n<<<\n你好{name}, 是否可以调整审查时间到周五？提案已准备好，但价格受最终批准的影响。请告知我是否这个时间段适合你。\n>>>\n\nReturn the review JSON only."
+    }
+  ],
+  "schema": {
+    "$defs": {
+      "ReviewIssue": {
+        "additionalProperties": false,
+        "properties": {
+          "dimension": {
+            "enum": [
+              "accuracy",
+              "fluency",
+              "style",
+              "terminology"
+            ],
+            "title": "Dimension",
+            "type": "string"
+          },
+          "source_excerpt": {
+            "title": "Source Excerpt",
+            "type": "string"
+          },
+          "translation_excerpt": {
+            "title": "Translation Excerpt",
+            "type": "string"
+          },
+          "explanation": {
+            "minLength": 1,
+            "title": "Explanation",
+            "type": "string"
+          },
+          "suggestion": {
+            "minLength": 1,
+            "title": "Suggestion",
+            "type": "string"
+          },
+          "severity": {
+            "enum": [
+              "minor",
+              "major",
+              "critical"
+            ],
+            "title": "Severity",
+            "type": "string"
+          }
+        },
+        "required": [
+          "dimension",
+          "source_excerpt",
+          "translation_excerpt",
+          "explanation",
+          "suggestion",
+          "severity"
+        ],
+        "title": "ReviewIssue",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "accuracy": {
+        "items": {
+          "$ref": "#/$defs/ReviewIssue"
+        },
+        "title": "Accuracy",
+        "type": "array"
+      },
+      "fluency": {
+        "items": {
+          "$ref": "#/$defs/ReviewIssue"
+        },
+        "title": "Fluency",
+        "type": "array"
+      },
+      "style": {
+        "items": {
+          "$ref": "#/$defs/ReviewIssue"
+        },
+        "title": "Style",
+        "type": "array"
+      },
+      "terminology": {
+        "items": {
+          "$ref": "#/$defs/ReviewIssue"
+        },
+        "title": "Terminology",
+        "type": "array"
+      }
+    },
+    "required": [
+      "accuracy",
+      "fluency",
+      "style",
+      "terminology"
+    ],
+    "title": "ReviewReport",
+    "type": "object"
+  },
+  "review_input_origin": null,
+  "request": {
+    "text": "Hi {name}, could we move the review to Thursday? The proposal is ready, but the pricing is subject to final approval. Please let me know if that timing works for you.",
+    "source_lang": "English",
+    "target_lang": "中文",
+    "locale": "zh-CN",
+    "style": "礼貌的工作邮件，准确保留尚待批准的条件；保留占位符",
+    "glossary": {
+      "proposal": "方案",
+      "final approval": "最终批准"
+    }
+  },
+  "frozen_initial_translation": "你好{name}, 是否可以调整审查时间到周五？提案已准备好，但价格受最终批准的影响。请告知我是否这个时间段适合你。",
+  "controlled_review": null,
+  "model": "gemma3:1b",
+  "backend": "ollama",
+  "generation_settings": {
+    "temperature": 0.2,
+    "max_output_tokens": 4096,
+    "ollama_num_ctx": 16384
+  },
+  "timeout_seconds": 120,
+  "created_at": "2026-11-03T01:28:14.474419+00:00",
+  "error": "truncated: Ollama 未生成完整结果，请检查输出长度上限。",
+  "response": {
+    "text": "{\"accuracy\": [] , \"fluency\": [], \"style\": [], \"terminology\": [{\"dimension\": \"style\", \"source_excerpt\": \"可以调整审查时间到周五？提案已准备好，但价格受最终批准的影响。请告知我是否这个时间段适合你。”}, {\"\n\n  ,\"translation_excerpt\": \"是否可以调整审查时间到周五？提案已准备好，但价格受最终批准的影响。请告知我是否这个时间段适合你。”}]} 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 1000 words. 100",
+    "input_tokens": 351,
+    "output_tokens": 4096
+  },
+  "elapsed_seconds": 40.982796,
+  "valid_review_schema": false,
+  "parse_error": "Unterminated string starting at: line 3 column 27 (char 184)"
+}

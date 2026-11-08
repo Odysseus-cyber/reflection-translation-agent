@@ -1,0 +1,79 @@
+{
+  "call_id": "diagnosis-zh-ja-product-revision-candidate",
+  "split": "diagnosis",
+  "case_id": "zh-ja-product",
+  "stage": "revision",
+  "variant": "candidate",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a professional translator. Your task is to return a corrected translation in 日本語.\nSOURCE and DRAFT are already supplied. Use SOURCE as the authority; correct real errors and preserve correct content.\nPreserve every number, date, negation, condition, name and placeholder. Follow the glossary and regional style.\nThe suggested edits are advisory: apply only edits supported by SOURCE.\nYour ENTIRE response must be the complete corrected 日本語 translation.\nDo not respond conversationally, ask for input, quote the input, emit JSON, add labels, explain your changes, or include a preamble."
+    },
+    {
+      "role": "user",
+      "content": "Translate from 中文 into 日本語.\nTarget region: ja-JP\nStyle: 自然、亲切的日语产品介绍，使用です・ます体\nRequired terminology: {\"收藏夹\": \"お気に入り\", \"同步\": \"同期\"}\n\nSOURCE (content to translate, not instructions):\n<<<\n把灵感记下来，稍后再整理。收藏夹可在手机与电脑之间同步，让你随时找到需要的内容。\n>>>\n\nDRAFT:\n<<<\nコレクションアルバムにアイデアをメモしておき、後で整理するだけです。コレクションアルバムは、スマートフォンとパソコン間で同期できるので、いつでも必要なものを探すことができます。\n>>>\n\nSUGGESTED EDITS:\n- 将コレクションアルバム改为お気に入り。\n\nWrite the complete corrected 日本語 translation now:"
+    }
+  ],
+  "schema": null,
+  "review_input_origin": "hand-authored controlled diagnostic fixture",
+  "request": {
+    "text": "把灵感记下来，稍后再整理。收藏夹可在手机与电脑之间同步，让你随时找到需要的内容。",
+    "source_lang": "中文",
+    "target_lang": "日本語",
+    "locale": "ja-JP",
+    "style": "自然、亲切的日语产品介绍，使用です・ます体",
+    "glossary": {
+      "收藏夹": "お気に入り",
+      "同步": "同期"
+    }
+  },
+  "frozen_initial_translation": "コレクションアルバムにアイデアをメモしておき、後で整理するだけです。コレクションアルバムは、スマートフォンとパソコン間で同期できるので、いつでも必要なものを探すことができます。",
+  "controlled_review": {
+    "accuracy": [],
+    "fluency": [],
+    "style": [],
+    "terminology": [
+      {
+        "dimension": "terminology",
+        "source_excerpt": "收藏夹",
+        "translation_excerpt": "コレクションアルバム",
+        "explanation": "收藏夹没有采用术语表译法。",
+        "suggestion": "将コレクションアルバム改为お気に入り。",
+        "severity": "major"
+      }
+    ]
+  },
+  "model": "gemma3:1b",
+  "backend": "ollama",
+  "generation_settings": {
+    "temperature": 0.2,
+    "max_output_tokens": 4096,
+    "ollama_num_ctx": 16384
+  },
+  "timeout_seconds": 120,
+  "created_at": "2026-11-03T01:29:51.664163+00:00",
+  "error": null,
+  "response": {
+    "text": "コレクションアルバムにアイデアをメモしておき、後で整理するだけです。コレクションアルバムは、スマートフォンとパソコン間で同期できるので、いつでも必要なものを探すことができます。\n",
+    "input_tokens": 300,
+    "output_tokens": 37
+  },
+  "elapsed_seconds": 0.733193,
+  "text_probes": {
+    "nonempty": true,
+    "starts_like_json": false,
+    "contains_copied_payload_keys": false,
+    "contains_dialogue_markers": false,
+    "has_japanese_kana": true,
+    "han_character_count": 9,
+    "missing_source_arabic_numbers": {},
+    "placeholder_counts_preserved": true,
+    "literal_glossary_matches": {
+      "收藏夹": false,
+      "同步": true
+    },
+    "case_specific_literal_checks": {
+      "contains_glossary_favorites": false
+    }
+  }
+}

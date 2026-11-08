@@ -1,0 +1,80 @@
+{
+  "model": "gemma3:1b",
+  "new_model_calls": 20,
+  "maximum_new_model_calls": 20,
+  "diagnosis_cases": [
+    "en-zh-business",
+    "zh-en-product",
+    "zh-ja-product",
+    "zh-ja-technical"
+  ],
+  "holdout_cases": [
+    "zh-en-business",
+    "ja-zh-technical"
+  ],
+  "counts": {
+    "diagnosis/review/current": {
+      "calls": 4,
+      "provider_success": 4,
+      "elapsed_seconds": 23.138,
+      "output_tokens": 1796,
+      "known_output_tokens": 1796,
+      "unknown_output_token_calls": 0,
+      "valid_review_schema": 1
+    },
+    "diagnosis/review/candidate": {
+      "calls": 4,
+      "provider_success": 1,
+      "elapsed_seconds": 87.023,
+      "output_tokens": null,
+      "known_output_tokens": 8328,
+      "unknown_output_token_calls": 1,
+      "valid_review_schema": 0
+    },
+    "diagnosis/revision/current": {
+      "calls": 4,
+      "provider_success": 4,
+      "elapsed_seconds": 3.915,
+      "output_tokens": 219,
+      "known_output_tokens": 219,
+      "unknown_output_token_calls": 0,
+      "dialogue_or_payload_flags": 0
+    },
+    "diagnosis/revision/candidate": {
+      "calls": 4,
+      "provider_success": 4,
+      "elapsed_seconds": 3.662,
+      "output_tokens": 214,
+      "known_output_tokens": 214,
+      "unknown_output_token_calls": 0,
+      "dialogue_or_payload_flags": 0
+    },
+    "holdout/review/candidate": {
+      "calls": 2,
+      "provider_success": 2,
+      "elapsed_seconds": 5.179,
+      "output_tokens": 294,
+      "known_output_tokens": 294,
+      "unknown_output_token_calls": 0,
+      "valid_review_schema": 1
+    },
+    "holdout/revision/candidate": {
+      "calls": 2,
+      "provider_success": 2,
+      "elapsed_seconds": 1.552,
+      "output_tokens": 80,
+      "known_output_tokens": 80,
+      "unknown_output_token_calls": 0,
+      "dialogue_or_payload_flags": 0
+    }
+  },
+  "interpretation": "Stage-level, single-generation diagnostic comparison; no quality score or claim of end-to-end improvement. Revision uses synthetic controlled reviews, never model review output. Holdouts have no newly sampled current-prompt arm.",
+  "historical_baselines": {
+    "en-zh-business": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/en-zh-business/result.json",
+    "zh-en-product": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/zh-en-product/result.json",
+    "zh-ja-product": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/zh-ja-product/result.json",
+    "zh-ja-technical": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/zh-ja-technical/result.json",
+    "zh-en-business": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/zh-en-business/result.json",
+    "ja-zh-technical": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/ja-zh-technical/result.json"
+  }
+}

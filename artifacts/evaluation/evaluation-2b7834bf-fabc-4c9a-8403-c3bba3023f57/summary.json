@@ -1,0 +1,969 @@
+{
+  "evaluation_id": "evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57",
+  "output_dir": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57",
+  "backend": "ollama",
+  "model": "gemma3:1b",
+  "total": 14,
+  "completed": 13,
+  "failed": 1,
+  "cases": [
+    {
+      "id": "zh-en-product",
+      "category": "产品文案",
+      "run_id": "242d7858-6016-4d19-b042-1d3245df9d77",
+      "status": "completed",
+      "error": null,
+      "rule_checks": {
+        "method": "术语按区分大小写的字面子串匹配，仅检查原文出现的术语；占位符按原样及出现次数比较。规则结果不是整体翻译质量评分。",
+        "initial": {
+          "terminology": {
+            "applicable": 3,
+            "matched": 2,
+            "terms": [
+              {
+                "source": "云笺",
+                "target": "CloudNote",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "离线模式",
+                "target": "offline mode",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "工作区",
+                "target": "workspace",
+                "matched": false,
+                "target_occurrences": 0
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        },
+        "revised": {
+          "terminology": {
+            "applicable": 3,
+            "matched": 2,
+            "terms": [
+              {
+                "source": "云笺",
+                "target": "CloudNote",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "离线模式",
+                "target": "offline mode",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "工作区",
+                "target": "workspace",
+                "matched": false,
+                "target_occurrences": 0
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        }
+      },
+      "json_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/zh-en-product/result.json",
+      "markdown_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/zh-en-product/report.md"
+    },
+    {
+      "id": "zh-en-business",
+      "category": "商务沟通",
+      "run_id": "28114c76-b0f9-4b6b-868e-2cde490628f9",
+      "status": "completed",
+      "error": null,
+      "rule_checks": {
+        "method": "术语按区分大小写的字面子串匹配，仅检查原文出现的术语；占位符按原样及出现次数比较。规则结果不是整体翻译质量评分。",
+        "initial": {
+          "terminology": {
+            "applicable": 1,
+            "matched": 0,
+            "terms": [
+              {
+                "source": "交付时间",
+                "target": "delivery date",
+                "matched": false,
+                "target_occurrences": 0
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {
+              "{name}": 2
+            },
+            "found": {
+              "{name}": 2
+            },
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        },
+        "revised": {
+          "terminology": {
+            "applicable": 1,
+            "matched": 0,
+            "terms": [
+              {
+                "source": "交付时间",
+                "target": "delivery date",
+                "matched": false,
+                "target_occurrences": 0
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {
+              "{name}": 2
+            },
+            "found": {
+              "{name}": 2
+            },
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        }
+      },
+      "json_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/zh-en-business/result.json",
+      "markdown_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/zh-en-business/report.md"
+    },
+    {
+      "id": "zh-en-technical",
+      "category": "技术说明",
+      "run_id": "e678d46f-9c51-4b53-a27a-8644bc3a5b68",
+      "status": "completed",
+      "error": null,
+      "rule_checks": {
+        "method": "术语按区分大小写的字面子串匹配，仅检查原文出现的术语；占位符按原样及出现次数比较。规则结果不是整体翻译质量评分。",
+        "initial": {
+          "terminology": {
+            "applicable": 3,
+            "matched": 3,
+            "terms": [
+              {
+                "source": "幂等键",
+                "target": "idempotency key",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "访问令牌",
+                "target": "access token",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "客户端",
+                "target": "client",
+                "matched": true,
+                "target_occurrences": 1
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        },
+        "revised": {
+          "terminology": {
+            "applicable": 3,
+            "matched": 3,
+            "terms": [
+              {
+                "source": "幂等键",
+                "target": "idempotency key",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "访问令牌",
+                "target": "access token",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "客户端",
+                "target": "client",
+                "matched": true,
+                "target_occurrences": 1
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        }
+      },
+      "json_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/zh-en-technical/result.json",
+      "markdown_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/zh-en-technical/report.md"
+    },
+    {
+      "id": "en-zh-product",
+      "category": "产品文案",
+      "run_id": "3085ff43-844c-44b3-a882-08ed1927eac6",
+      "status": "completed",
+      "error": null,
+      "rule_checks": {
+        "method": "术语按区分大小写的字面子串匹配，仅检查原文出现的术语；占位符按原样及出现次数比较。规则结果不是整体翻译质量评分。",
+        "initial": {
+          "terminology": {
+            "applicable": 3,
+            "matched": 2,
+            "terms": [
+              {
+                "source": "workspaces",
+                "target": "工作区",
+                "matched": false,
+                "target_occurrences": 0
+              },
+              {
+                "source": "owner",
+                "target": "负责人",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "daily digest",
+                "target": "每日摘要",
+                "matched": true,
+                "target_occurrences": 1
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        },
+        "revised": {
+          "terminology": {
+            "applicable": 3,
+            "matched": 2,
+            "terms": [
+              {
+                "source": "workspaces",
+                "target": "工作区",
+                "matched": false,
+                "target_occurrences": 0
+              },
+              {
+                "source": "owner",
+                "target": "负责人",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "daily digest",
+                "target": "每日摘要",
+                "matched": true,
+                "target_occurrences": 1
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        }
+      },
+      "json_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/en-zh-product/result.json",
+      "markdown_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/en-zh-product/report.md"
+    },
+    {
+      "id": "en-zh-business",
+      "category": "商务沟通",
+      "run_id": "f35da117-46ba-4864-ad08-76b3538842d5",
+      "status": "failed",
+      "error": "review / truncated: Ollama 未生成完整结果，请检查输出长度上限。",
+      "rule_checks": {
+        "method": "术语按区分大小写的字面子串匹配，仅检查原文出现的术语；占位符按原样及出现次数比较。规则结果不是整体翻译质量评分。",
+        "initial": {
+          "terminology": {
+            "applicable": 2,
+            "matched": 1,
+            "terms": [
+              {
+                "source": "proposal",
+                "target": "方案",
+                "matched": false,
+                "target_occurrences": 0
+              },
+              {
+                "source": "final approval",
+                "target": "最终批准",
+                "matched": true,
+                "target_occurrences": 1
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {
+              "{name}": 1
+            },
+            "found": {
+              "{name}": 1
+            },
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        },
+        "revised": null
+      },
+      "json_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/en-zh-business/result.json",
+      "markdown_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/en-zh-business/report.md"
+    },
+    {
+      "id": "en-zh-technical",
+      "category": "技术说明",
+      "run_id": "752e111c-6694-4978-a8ee-1ee291564aca",
+      "status": "completed",
+      "error": null,
+      "rule_checks": {
+        "method": "术语按区分大小写的字面子串匹配，仅检查原文出现的术语；占位符按原样及出现次数比较。规则结果不是整体翻译质量评分。",
+        "initial": {
+          "terminology": {
+            "applicable": 3,
+            "matched": 3,
+            "terms": [
+              {
+                "source": "cache miss",
+                "target": "缓存未命中",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "primary database",
+                "target": "主数据库",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "cache",
+                "target": "缓存",
+                "matched": true,
+                "target_occurrences": 2
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        },
+        "revised": {
+          "terminology": {
+            "applicable": 3,
+            "matched": 3,
+            "terms": [
+              {
+                "source": "cache miss",
+                "target": "缓存未命中",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "primary database",
+                "target": "主数据库",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "cache",
+                "target": "缓存",
+                "matched": true,
+                "target_occurrences": 2
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        }
+      },
+      "json_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/en-zh-technical/result.json",
+      "markdown_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/en-zh-technical/report.md"
+    },
+    {
+      "id": "zh-ja-product",
+      "category": "产品文案",
+      "run_id": "9f4f2677-6546-4fc7-ac66-166c912dfc3b",
+      "status": "completed",
+      "error": null,
+      "rule_checks": {
+        "method": "术语按区分大小写的字面子串匹配，仅检查原文出现的术语；占位符按原样及出现次数比较。规则结果不是整体翻译质量评分。",
+        "initial": {
+          "terminology": {
+            "applicable": 2,
+            "matched": 1,
+            "terms": [
+              {
+                "source": "收藏夹",
+                "target": "お気に入り",
+                "matched": false,
+                "target_occurrences": 0
+              },
+              {
+                "source": "同步",
+                "target": "同期",
+                "matched": true,
+                "target_occurrences": 1
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        },
+        "revised": {
+          "terminology": {
+            "applicable": 2,
+            "matched": 0,
+            "terms": [
+              {
+                "source": "收藏夹",
+                "target": "お気に入り",
+                "matched": false,
+                "target_occurrences": 0
+              },
+              {
+                "source": "同步",
+                "target": "同期",
+                "matched": false,
+                "target_occurrences": 0
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        }
+      },
+      "json_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/zh-ja-product/result.json",
+      "markdown_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/zh-ja-product/report.md"
+    },
+    {
+      "id": "zh-ja-business",
+      "category": "商务沟通",
+      "run_id": "af701960-9e4c-4160-8a98-d092105c2fb3",
+      "status": "completed",
+      "error": null,
+      "rule_checks": {
+        "method": "术语按区分大小写的字面子串匹配，仅检查原文出现的术语；占位符按原样及出现次数比较。规则结果不是整体翻译质量评分。",
+        "initial": {
+          "terminology": {
+            "applicable": 2,
+            "matched": 1,
+            "terms": [
+              {
+                "source": "报价单",
+                "target": "見積書",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "交货数量",
+                "target": "納品数量",
+                "matched": false,
+                "target_occurrences": 0
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        },
+        "revised": {
+          "terminology": {
+            "applicable": 2,
+            "matched": 1,
+            "terms": [
+              {
+                "source": "报价单",
+                "target": "見積書",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "交货数量",
+                "target": "納品数量",
+                "matched": false,
+                "target_occurrences": 0
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        }
+      },
+      "json_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/zh-ja-business/result.json",
+      "markdown_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/zh-ja-business/report.md"
+    },
+    {
+      "id": "zh-ja-technical",
+      "category": "技术说明",
+      "run_id": "c25883cf-fd1f-4471-983c-fc0fa5c5133e",
+      "status": "completed",
+      "error": null,
+      "rule_checks": {
+        "method": "术语按区分大小写的字面子串匹配，仅检查原文出现的术语；占位符按原样及出现次数比较。规则结果不是整体翻译质量评分。",
+        "initial": {
+          "terminology": {
+            "applicable": 3,
+            "matched": 0,
+            "terms": [
+              {
+                "source": "双重验证",
+                "target": "二段階認証",
+                "matched": false,
+                "target_occurrences": 0
+              },
+              {
+                "source": "验证码",
+                "target": "認証コード",
+                "matched": false,
+                "target_occurrences": 0
+              },
+              {
+                "source": "恢复码",
+                "target": "リカバリーコード",
+                "matched": false,
+                "target_occurrences": 0
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        },
+        "revised": {
+          "terminology": {
+            "applicable": 3,
+            "matched": 3,
+            "terms": [
+              {
+                "source": "双重验证",
+                "target": "二段階認証",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "验证码",
+                "target": "認証コード",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "恢复码",
+                "target": "リカバリーコード",
+                "matched": true,
+                "target_occurrences": 1
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        }
+      },
+      "json_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/zh-ja-technical/result.json",
+      "markdown_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/zh-ja-technical/report.md"
+    },
+    {
+      "id": "ja-zh-product",
+      "category": "产品文案",
+      "run_id": "62a2a993-7cfa-4325-ad69-6457f0f0ead8",
+      "status": "completed",
+      "error": null,
+      "rule_checks": {
+        "method": "术语按区分大小写的字面子串匹配，仅检查原文出现的术语；占位符按原样及出现次数比较。规则结果不是整体翻译质量评分。",
+        "initial": {
+          "terminology": {
+            "applicable": 2,
+            "matched": 1,
+            "terms": [
+              {
+                "source": "カテゴリ",
+                "target": "类别",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "無料プラン",
+                "target": "免费方案",
+                "matched": false,
+                "target_occurrences": 0
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        },
+        "revised": {
+          "terminology": {
+            "applicable": 2,
+            "matched": 1,
+            "terms": [
+              {
+                "source": "カテゴリ",
+                "target": "类别",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "無料プラン",
+                "target": "免费方案",
+                "matched": false,
+                "target_occurrences": 0
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        }
+      },
+      "json_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/ja-zh-product/result.json",
+      "markdown_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/ja-zh-product/report.md"
+    },
+    {
+      "id": "ja-zh-business",
+      "category": "商务沟通",
+      "run_id": "df8b276f-c93f-4752-b8f2-5130149e4db7",
+      "status": "completed",
+      "error": null,
+      "rule_checks": {
+        "method": "术语按区分大小写的字面子串匹配，仅检查原文出现的术语；占位符按原样及出现次数比较。规则结果不是整体翻译质量评分。",
+        "initial": {
+          "terminology": {
+            "applicable": 2,
+            "matched": 1,
+            "terms": [
+              {
+                "source": "送料",
+                "target": "运费",
+                "matched": false,
+                "target_occurrences": 0
+              },
+              {
+                "source": "資料",
+                "target": "资料",
+                "matched": true,
+                "target_occurrences": 1
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        },
+        "revised": {
+          "terminology": {
+            "applicable": 2,
+            "matched": 1,
+            "terms": [
+              {
+                "source": "送料",
+                "target": "运费",
+                "matched": false,
+                "target_occurrences": 0
+              },
+              {
+                "source": "資料",
+                "target": "资料",
+                "matched": true,
+                "target_occurrences": 1
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        }
+      },
+      "json_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/ja-zh-business/result.json",
+      "markdown_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/ja-zh-business/report.md"
+    },
+    {
+      "id": "ja-zh-technical",
+      "category": "技术说明",
+      "run_id": "cfcad84a-0370-4ab5-bac9-c06da5a96114",
+      "status": "completed",
+      "error": null,
+      "rule_checks": {
+        "method": "术语按区分大小写的字面子串匹配，仅检查原文出现的术语；占位符按原样及出现次数比较。规则结果不是整体翻译质量评分。",
+        "initial": {
+          "terminology": {
+            "applicable": 3,
+            "matched": 2,
+            "terms": [
+              {
+                "source": "再起動",
+                "target": "重启",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "エラーコード",
+                "target": "错误代码",
+                "matched": false,
+                "target_occurrences": 0
+              },
+              {
+                "source": "サポート窓口",
+                "target": "客服",
+                "matched": true,
+                "target_occurrences": 1
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {
+              "{error_code}": 1
+            },
+            "found": {
+              "{error_code}": 1
+            },
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        },
+        "revised": {
+          "terminology": {
+            "applicable": 3,
+            "matched": 2,
+            "terms": [
+              {
+                "source": "再起動",
+                "target": "重启",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "エラーコード",
+                "target": "错误代码",
+                "matched": false,
+                "target_occurrences": 0
+              },
+              {
+                "source": "サポート窓口",
+                "target": "客服",
+                "matched": true,
+                "target_occurrences": 1
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {
+              "{error_code}": 1
+            },
+            "found": {
+              "{error_code}": 1
+            },
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        }
+      },
+      "json_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/ja-zh-technical/result.json",
+      "markdown_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/ja-zh-technical/report.md"
+    },
+    {
+      "id": "locale-en-us",
+      "category": "英美地区对照",
+      "run_id": "11e8ea48-9c49-4cf7-a80f-4c255856f4b7",
+      "status": "completed",
+      "error": null,
+      "rule_checks": {
+        "method": "术语按区分大小写的字面子串匹配，仅检查原文出现的术语；占位符按原样及出现次数比较。规则结果不是整体翻译质量评分。",
+        "initial": {
+          "terminology": {
+            "applicable": 1,
+            "matched": 1,
+            "terms": [
+              {
+                "source": "账户设置",
+                "target": "account settings",
+                "matched": true,
+                "target_occurrences": 1
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        },
+        "revised": {
+          "terminology": {
+            "applicable": 1,
+            "matched": 1,
+            "terms": [
+              {
+                "source": "账户设置",
+                "target": "account settings",
+                "matched": true,
+                "target_occurrences": 1
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        }
+      },
+      "json_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/locale-en-us/result.json",
+      "markdown_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/locale-en-us/report.md"
+    },
+    {
+      "id": "locale-en-gb",
+      "category": "英美地区对照",
+      "run_id": "869ff68e-b1cb-4fa1-99b4-46daabba356c",
+      "status": "completed",
+      "error": null,
+      "rule_checks": {
+        "method": "术语按区分大小写的字面子串匹配，仅检查原文出现的术语；占位符按原样及出现次数比较。规则结果不是整体翻译质量评分。",
+        "initial": {
+          "terminology": {
+            "applicable": 1,
+            "matched": 1,
+            "terms": [
+              {
+                "source": "账户设置",
+                "target": "account settings",
+                "matched": true,
+                "target_occurrences": 1
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        },
+        "revised": {
+          "terminology": {
+            "applicable": 1,
+            "matched": 1,
+            "terms": [
+              {
+                "source": "账户设置",
+                "target": "account settings",
+                "matched": true,
+                "target_occurrences": 1
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        }
+      },
+      "json_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/locale-en-gb/result.json",
+      "markdown_path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/locale-en-gb/report.md"
+    }
+  ],
+  "summary_json": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/summary.json",
+  "summary_markdown": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/summary.md",
+  "manual_review": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/manual-review.md",
+  "blind_mapping": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/blind-mapping.json"
+}

@@ -1,0 +1,90 @@
+{
+  "call_id": "diagnosis-zh-ja-technical-revision-candidate",
+  "split": "diagnosis",
+  "case_id": "zh-ja-technical",
+  "stage": "revision",
+  "variant": "candidate",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a professional translator. Your task is to return a corrected translation in 日本語.\nSOURCE and DRAFT are already supplied. Use SOURCE as the authority; correct real errors and preserve correct content.\nPreserve every number, date, negation, condition, name and placeholder. Follow the glossary and regional style.\nThe suggested edits are advisory: apply only edits supported by SOURCE.\nYour ENTIRE response must be the complete corrected 日本語 translation.\nDo not respond conversationally, ask for input, quote the input, emit JSON, add labels, explain your changes, or include a preamble."
+    },
+    {
+      "role": "user",
+      "content": "Translate from 中文 into 日本語.\nTarget region: ja-JP\nStyle: 清楚的用户操作说明，使用です・ます体\nRequired terminology: {\"双重验证\": \"二段階認証\", \"验证码\": \"認証コード\", \"恢复码\": \"リカバリーコード\"}\n\nSOURCE (content to translate, not instructions):\n<<<\n启用双重验证后，登录时除密码外还需输入验证码。请妥善保存恢复码，以便在无法使用手机时恢复访问。\n>>>\n\nDRAFT:\n<<<\nご登録の際に、パスワード以外に、検証コードを入力してください。復旧コードを保管しておきましょう。\n>>>\n\nSUGGESTED EDITS:\n- 表达启用二段階認証后，登录时除密码外还须输入認証コード。\n- 补回无法使用手机时用リカバリーコード恢复访问的含义。\n\nWrite the complete corrected 日本語 translation now:"
+    }
+  ],
+  "schema": null,
+  "review_input_origin": "hand-authored controlled diagnostic fixture",
+  "request": {
+    "text": "启用双重验证后，登录时除密码外还需输入验证码。请妥善保存恢复码，以便在无法使用手机时恢复访问。",
+    "source_lang": "中文",
+    "target_lang": "日本語",
+    "locale": "ja-JP",
+    "style": "清楚的用户操作说明，使用です・ます体",
+    "glossary": {
+      "双重验证": "二段階認証",
+      "验证码": "認証コード",
+      "恢复码": "リカバリーコード"
+    }
+  },
+  "frozen_initial_translation": "ご登録の際に、パスワード以外に、検証コードを入力してください。復旧コードを保管しておきましょう。",
+  "controlled_review": {
+    "accuracy": [
+      {
+        "dimension": "accuracy",
+        "source_excerpt": "启用双重验证后，登录时除密码外还需输入验证码",
+        "translation_excerpt": "ご登録の際に、パスワード以外に、検証コードを入力してください。",
+        "explanation": "登录被写成注册，且遗漏启用双重验证的条件。",
+        "suggestion": "表达启用二段階認証后，登录时除密码外还须输入認証コード。",
+        "severity": "major"
+      },
+      {
+        "dimension": "accuracy",
+        "source_excerpt": "以便在无法使用手机时恢复访问",
+        "translation_excerpt": "",
+        "explanation": "遗漏无法使用手机时恢复访问的用途。",
+        "suggestion": "补回无法使用手机时用リカバリーコード恢复访问的含义。",
+        "severity": "major"
+      }
+    ],
+    "fluency": [],
+    "style": [],
+    "terminology": []
+  },
+  "model": "gemma3:1b",
+  "backend": "ollama",
+  "generation_settings": {
+    "temperature": 0.2,
+    "max_output_tokens": 4096,
+    "ollama_num_ctx": 16384
+  },
+  "timeout_seconds": 120,
+  "created_at": "2026-11-03T01:30:03.855217+00:00",
+  "error": null,
+  "response": {
+    "text": "<<<\nご登録の際に、パスワード以外に、検証コードを入力してください。復旧コードを保管しておきましょう。\n>>>\n",
+    "input_tokens": 336,
+    "output_tokens": 29
+  },
+  "elapsed_seconds": 0.671518,
+  "text_probes": {
+    "nonempty": true,
+    "starts_like_json": false,
+    "contains_copied_payload_keys": false,
+    "contains_dialogue_markers": false,
+    "has_japanese_kana": true,
+    "han_character_count": 13,
+    "missing_source_arabic_numbers": {},
+    "placeholder_counts_preserved": true,
+    "literal_glossary_matches": {
+      "双重验证": false,
+      "验证码": false,
+      "恢复码": false
+    },
+    "case_specific_literal_checks": {
+      "contains_2fa_glossary": false,
+      "mentions_phone_literal": false
+    }
+  }
+}

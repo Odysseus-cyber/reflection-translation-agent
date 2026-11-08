@@ -1,0 +1,22 @@
+{
+  "run_id":"preset-cloudnote-v1",
+  "created_at":"2026-11-03T00:00:00Z",
+  "mode":"preset",
+  "request":{"text":"欢迎使用云笺，{name}！开启离线模式后，你仍可编辑笔记；重新联网时，修改会自动同步到工作区。","source_lang":"中文","target_lang":"English","locale":"en-US","style":"简洁、友好的产品文案；保留占位符","glossary":{"云笺":"CloudNote","离线模式":"offline mode","工作区":"workspace"}},
+  "backend":"preset",
+  "model":"手工编写的流程示例（非模型实测）",
+  "status":"completed",
+  "initial_translation":"Welcome to CloudNote, {name}! Turn on offline mode and you can still edit notes. When you connect again, your changes will automatically sync to your work area.",
+  "review":{
+    "accuracy":[],
+    "fluency":[],
+    "style":[{"dimension":"style","source_excerpt":"重新联网时","translation_excerpt":"When you connect again","explanation":"产品文案可采用更简洁自然的说法。","suggestion":"使用 When you're back online。","severity":"minor"}],
+    "terminology":[{"dimension":"terminology","source_excerpt":"工作区","translation_excerpt":"work area","explanation":"未使用术语表规定的 workspace。","suggestion":"将 work area 改为 workspace。","severity":"major"}]
+  },
+  "revised_translation":"Welcome to CloudNote, {name}! With offline mode on, you can still edit your notes. When you're back online, your changes will automatically sync to your workspace.",
+  "stages":[
+    {"name":"initial","status":"completed","calls":[],"note":"手工固定示例，无模型调用或实测用量"},
+    {"name":"review","status":"completed","calls":[],"note":"手工固定示例，无模型调用或实测用量"},
+    {"name":"revision","status":"completed","calls":[],"note":"手工固定示例，无模型调用或实测用量"}
+  ]
+}

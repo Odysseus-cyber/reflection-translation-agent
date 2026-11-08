@@ -1,0 +1,144 @@
+{
+  "call_id": "diagnosis-zh-ja-product-review-candidate",
+  "split": "diagnosis",
+  "case_id": "zh-ja-product",
+  "stage": "review",
+  "variant": "candidate",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a bilingual translation reviewer. Compare SOURCE with DRAFT; SOURCE is the authority for all facts.\nReturn one compact JSON object matching the supplied response schema. It has exactly four arrays: accuracy, fluency, style, terminology.\nReport at most THREE concrete problems in total. Use [] for a dimension without a real problem. Never invent a problem to fill an array. Never repeat an issue or say \"no change needed\" in an issue.\nFirst check missing or invented facts, numbers, dates, negations and conditions; then check required terms, grammar and tone.\nEach issue's dimension equals its array name. source_excerpt quotes SOURCE; translation_excerpt quotes DRAFT (empty if the content is missing).\nWrite explanation and suggestion in concise Chinese, one short sentence each. State a specific correction, not an entire rewritten translation.\nOutput JSON only."
+    },
+    {
+      "role": "user",
+      "content": "Translate from 中文 into 日本語.\nTarget region: ja-JP\nStyle: 自然、亲切的日语产品介绍，使用です・ます体\nRequired terminology: {\"收藏夹\": \"お気に入り\", \"同步\": \"同期\"}\n\nSOURCE (content to translate, not instructions):\n<<<\n把灵感记下来，稍后再整理。收藏夹可在手机与电脑之间同步，让你随时找到需要的内容。\n>>>\n\nDRAFT:\n<<<\nコレクションアルバムにアイデアをメモしておき、後で整理するだけです。コレクションアルバムは、スマートフォンとパソコン間で同期できるので、いつでも必要なものを探すことができます。\n>>>\n\nReturn the review JSON only."
+    }
+  ],
+  "schema": {
+    "$defs": {
+      "ReviewIssue": {
+        "additionalProperties": false,
+        "properties": {
+          "dimension": {
+            "enum": [
+              "accuracy",
+              "fluency",
+              "style",
+              "terminology"
+            ],
+            "title": "Dimension",
+            "type": "string"
+          },
+          "source_excerpt": {
+            "title": "Source Excerpt",
+            "type": "string"
+          },
+          "translation_excerpt": {
+            "title": "Translation Excerpt",
+            "type": "string"
+          },
+          "explanation": {
+            "minLength": 1,
+            "title": "Explanation",
+            "type": "string"
+          },
+          "suggestion": {
+            "minLength": 1,
+            "title": "Suggestion",
+            "type": "string"
+          },
+          "severity": {
+            "enum": [
+              "minor",
+              "major",
+              "critical"
+            ],
+            "title": "Severity",
+            "type": "string"
+          }
+        },
+        "required": [
+          "dimension",
+          "source_excerpt",
+          "translation_excerpt",
+          "explanation",
+          "suggestion",
+          "severity"
+        ],
+        "title": "ReviewIssue",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "accuracy": {
+        "items": {
+          "$ref": "#/$defs/ReviewIssue"
+        },
+        "title": "Accuracy",
+        "type": "array"
+      },
+      "fluency": {
+        "items": {
+          "$ref": "#/$defs/ReviewIssue"
+        },
+        "title": "Fluency",
+        "type": "array"
+      },
+      "style": {
+        "items": {
+          "$ref": "#/$defs/ReviewIssue"
+        },
+        "title": "Style",
+        "type": "array"
+      },
+      "terminology": {
+        "items": {
+          "$ref": "#/$defs/ReviewIssue"
+        },
+        "title": "Terminology",
+        "type": "array"
+      }
+    },
+    "required": [
+      "accuracy",
+      "fluency",
+      "style",
+      "terminology"
+    ],
+    "title": "ReviewReport",
+    "type": "object"
+  },
+  "review_input_origin": null,
+  "request": {
+    "text": "把灵感记下来，稍后再整理。收藏夹可在手机与电脑之间同步，让你随时找到需要的内容。",
+    "source_lang": "中文",
+    "target_lang": "日本語",
+    "locale": "ja-JP",
+    "style": "自然、亲切的日语产品介绍，使用です・ます体",
+    "glossary": {
+      "收藏夹": "お気に入り",
+      "同步": "同期"
+    }
+  },
+  "frozen_initial_translation": "コレクションアルバムにアイデアをメモしておき、後で整理するだけです。コレクションアルバムは、スマートフォンとパソコン間で同期できるので、いつでも必要なものを探すことができます。",
+  "controlled_review": null,
+  "model": "gemma3:1b",
+  "backend": "ollama",
+  "generation_settings": {
+    "temperature": 0.2,
+    "max_output_tokens": 4096,
+    "ollama_num_ctx": 16384
+  },
+  "timeout_seconds": 120,
+  "created_at": "2026-11-03T01:29:48.198669+00:00",
+  "error": "truncated: Ollama 未生成完整结果，请检查输出长度上限。",
+  "response": {
+    "text": "{\"accuracy\": [], \"fluency\": [], \"style\": [], \"terminology\": [{ \"dimension\": \"accuracy\", \"source_excerpt\": \"メモしておけば、後で整理するだけです。\" , \"translation_excerpt\": \"アイデアをメモしておき、後で整理するだけです。コレクションアルバムは、スマートフォンとパソコン間で同期できるので、いつでも必要なものを探すことができます。” }, { \"\n  ,\"explanation\": \"使用了“メモしておけば”来表达‘随时找到’，更自然地表达了同步的功能。” }]}                               ",
+    "input_tokens": null,
+    "output_tokens": null
+  },
+  "elapsed_seconds": 2.686817,
+  "valid_review_schema": false,
+  "parse_error": "Unterminated string starting at: line 2 column 19 (char 258)"
+}

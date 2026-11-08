@@ -1,0 +1,225 @@
+{
+  "run_id": "2827fdef-c3ee-4272-be4d-175bd0ba5c53",
+  "created_at": "2026-11-03T01:14:27.950769Z",
+  "mode": "live",
+  "request": {
+    "text": "免费试用结束后，您的工作区将保留 30 天。请在到期前导出数据。",
+    "source_lang": "zh",
+    "target_lang": "en",
+    "locale": "en-GB",
+    "style": "清晰、友好的产品提示",
+    "glossary": {
+      "工作区": "workspace",
+      "免费试用": "free trial"
+    }
+  },
+  "backend": "ollama",
+  "model": "gemma3:1b",
+  "prompt_version": null,
+  "generation_settings": {
+    "temperature": 0.2,
+    "max_output_tokens": 4096,
+    "ollama_num_ctx": 16384
+  },
+  "status": "completed",
+  "initial_translation": "Free trial expires after 30 days. Your workspace will retain data until the expiration date.",
+  "review": {
+    "accuracy": [],
+    "fluency": [],
+    "style": [
+      {
+        "dimension": "style",
+        "source_excerpt": "清晰、友好的产品提示",
+        "translation_excerpt": "清晰、友好的产品提示",
+        "explanation": "The translation maintains a clear and friendly tone, suitable for product prompts.",
+        "suggestion": "Consider adding more context regarding the data retention period to enhance clarity.",
+        "severity": "minor"
+      },
+      {
+        "dimension": "style",
+        "source_excerpt": "免费试用结束后，您的工作区将保留数据",
+        "translation_excerpt": "Free trial expires after 30 days. Your workspace will retain data until the expiration date",
+        "explanation": "The translation maintains a clear and friendly tone, suitable for product prompts.",
+        "suggestion": "Consider adding more context regarding the data retention period to enhance clarity.",
+        "severity": "minor"
+      },
+      {
+        "dimension": "style",
+        "source_excerpt": "您的工作区将保留数据",
+        "translation_excerpt": "Your workspace will retain data until the expiration date",
+        "explanation": "The translation maintains a clear and friendly tone, suitable for product prompts.",
+        "suggestion": "Consider adding more context regarding the data retention period to enhance clarity.",
+        "severity": "minor"
+      }
+    ],
+    "terminology": [
+      {
+        "dimension": "terminology",
+        "source_excerpt": "您的工作区将保留数据",
+        "translation_excerpt": "Your workspace will retain data until the expiration date",
+        "explanation": "The translation maintains a clear and friendly tone, suitable for product prompts.",
+        "suggestion": "Consider adding more context regarding the data retention period to enhance clarity.",
+        "severity": "minor"
+      },
+      {
+        "dimension": "terminology",
+        "source_excerpt": "免费试用结束后，您的工作区将保留数据",
+        "translation_excerpt": "Free trial expires after 30 days. Your workspace will retain data until the expiration date",
+        "explanation": "The translation maintains a clear and friendly tone, suitable for product prompts.",
+        "suggestion": "Consider adding more context regarding the data retention period to enhance clarity.",
+        "severity": "minor"
+      }
+    ]
+  },
+  "revised_translation": "Free trial expires after 30 days. Your workspace will retain data until the expiration date?",
+  "stages": [
+    {
+      "name": "initial",
+      "status": "completed",
+      "calls": [
+        {
+          "attempt": 1,
+          "elapsed_seconds": 1.981209,
+          "input_tokens": 269,
+          "output_tokens": 21,
+          "raw_output": "Free trial expires after 30 days. Your workspace will retain data until the expiration date.\n",
+          "error": null
+        }
+      ],
+      "note": ""
+    },
+    {
+      "name": "review",
+      "status": "completed",
+      "calls": [
+        {
+          "attempt": 1,
+          "elapsed_seconds": 5.123037,
+          "input_tokens": 831,
+          "output_tokens": 430,
+          "raw_output": "{\"accuracy\": [], \"fluency\": [], \"style\": [{\"dimension\": \"style\", \"source_excerpt\": \"清晰、友好的产品提示\",\"translation_excerpt\": \"清晰、友好的产品提示\" , \"explanation\": \"The translation maintains a clear and friendly tone, suitable for product prompts.\" , \"suggestion\": \"Consider adding more context regarding the data retention period to enhance clarity.\" , \"severity\": \"minor\"}, {\"dimension\": \"style\", \"source_excerpt\": \"免费试用结束后，您的工作区将保留数据\",\"translation_excerpt\": \"Free trial expires after 30 days. Your workspace will retain data until the expiration date\" , \"explanation\": \"The translation maintains a clear and friendly tone, suitable for product prompts.\" , \"suggestion\": \"Consider adding more context regarding the data retention period to enhance clarity.\", \"severity\": \"minor\"}, {\"dimension\": \"style\", \"source_excerpt\": \"您的工作区将保留数据\",\"translation_excerpt\": \"Your workspace will retain data until the expiration date\" , \"explanation\": \"The translation maintains a clear and friendly tone, suitable for product prompts.\" , \"suggestion\": \"Consider adding more context regarding the data retention period to enhance clarity.\", \"severity\": \"minor\"}], \"terminology\": [{\"dimension\": \"terminology\", \"source_excerpt\": \"您的工作区将保留数据\",\"translation_excerpt\": \"Your workspace will retain data until the expiration date\" , \"explanation\": \"The translation maintains a clear and friendly tone, suitable for product prompts.\" , \"suggestion\": \"Consider adding more context regarding the data retention period to enhance clarity.\", \"severity\": \"minor\"}, {\"dimension\": \"terminology\", \"source_excerpt\": \"免费试用结束后，您的工作区将保留数据\",\"translation_excerpt\": \"Free trial expires after 30 days. Your workspace will retain data until the expiration date\" , \"explanation\": \"The translation maintains a clear and friendly tone, suitable for product prompts.\" , \"suggestion\": \"Consider adding more context regarding the data retention period to enhance clarity.\", \"severity\": \"minor\"}]}\n",
+          "error": null
+        }
+      ],
+      "note": ""
+    },
+    {
+      "name": "revision",
+      "status": "completed",
+      "calls": [
+        {
+          "attempt": 1,
+          "elapsed_seconds": 0.757765,
+          "input_tokens": 747,
+          "output_tokens": 20,
+          "raw_output": "Free trial expires after 30 days. Your workspace will retain data until the expiration date?",
+          "error": null
+        }
+      ],
+      "note": ""
+    }
+  ],
+  "error": null,
+  "rule_checks": {
+    "method": "术语按区分大小写的字面子串匹配，仅检查原文出现的术语；占位符按原样及出现次数比较。规则结果不是整体翻译质量评分。",
+    "initial": {
+      "terminology": {
+        "applicable": 2,
+        "matched": 1,
+        "terms": [
+          {
+            "source": "工作区",
+            "target": "workspace",
+            "matched": true,
+            "target_occurrences": 1
+          },
+          {
+            "source": "免费试用",
+            "target": "free trial",
+            "matched": false,
+            "target_occurrences": 0
+          }
+        ]
+      },
+      "placeholders": {
+        "expected": {},
+        "found": {},
+        "missing": {},
+        "extra": {},
+        "preserved": true
+      }
+    },
+    "revised": {
+      "terminology": {
+        "applicable": 2,
+        "matched": 1,
+        "terms": [
+          {
+            "source": "工作区",
+            "target": "workspace",
+            "matched": true,
+            "target_occurrences": 1
+          },
+          {
+            "source": "免费试用",
+            "target": "free trial",
+            "matched": false,
+            "target_occurrences": 0
+          }
+        ]
+      },
+      "placeholders": {
+        "expected": {},
+        "found": {},
+        "missing": {},
+        "extra": {},
+        "preserved": true
+      }
+    },
+    "review_evidence": {
+      "method": "按原样核对审校引用是否为原文或初译的子串；空片段记为未提供。此结果仅供定位引用，不验证建议是否正确，也不改变审校意见。",
+      "issues": [
+        {
+          "dimension": "style",
+          "issue_index": 1,
+          "source_excerpt_found": false,
+          "translation_excerpt_found": false,
+          "source_excerpt_status": "not_found",
+          "translation_excerpt_status": "not_found"
+        },
+        {
+          "dimension": "style",
+          "issue_index": 2,
+          "source_excerpt_found": false,
+          "translation_excerpt_found": true,
+          "source_excerpt_status": "not_found",
+          "translation_excerpt_status": "found"
+        },
+        {
+          "dimension": "style",
+          "issue_index": 3,
+          "source_excerpt_found": false,
+          "translation_excerpt_found": true,
+          "source_excerpt_status": "not_found",
+          "translation_excerpt_status": "found"
+        },
+        {
+          "dimension": "terminology",
+          "issue_index": 1,
+          "source_excerpt_found": false,
+          "translation_excerpt_found": true,
+          "source_excerpt_status": "not_found",
+          "translation_excerpt_status": "found"
+        },
+        {
+          "dimension": "terminology",
+          "issue_index": 2,
+          "source_excerpt_found": false,
+          "translation_excerpt_found": true,
+          "source_excerpt_status": "not_found",
+          "translation_excerpt_status": "found"
+        }
+      ]
+    }
+  }
+}

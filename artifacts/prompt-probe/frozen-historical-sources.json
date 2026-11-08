@@ -1,0 +1,946 @@
+{
+  "en-zh-business": {
+    "path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/en-zh-business/result.json",
+    "record": {
+      "run_id": "f35da117-46ba-4864-ad08-76b3538842d5",
+      "created_at": "2026-11-03T01:16:51.556587Z",
+      "mode": "live",
+      "request": {
+        "text": "Hi {name}, could we move the review to Thursday? The proposal is ready, but the pricing is subject to final approval. Please let me know if that timing works for you.",
+        "source_lang": "English",
+        "target_lang": "中文",
+        "locale": "zh-CN",
+        "style": "礼貌的工作邮件，准确保留尚待批准的条件；保留占位符",
+        "glossary": {
+          "proposal": "方案",
+          "final approval": "最终批准"
+        }
+      },
+      "backend": "ollama",
+      "model": "gemma3:1b",
+      "generation_settings": {
+        "temperature": 0.2,
+        "max_output_tokens": 4096,
+        "ollama_num_ctx": 16384
+      },
+      "status": "failed",
+      "initial_translation": "你好{name}, 是否可以调整审查时间到周五？提案已准备好，但价格受最终批准的影响。请告知我是否这个时间段适合你。",
+      "review": null,
+      "revised_translation": null,
+      "stages": [
+        {
+          "name": "initial",
+          "status": "completed",
+          "calls": [
+            {
+              "attempt": 1,
+              "elapsed_seconds": 0.74981,
+              "input_tokens": 293,
+              "output_tokens": 37,
+              "raw_output": "你好{name}, 是否可以调整审查时间到周五？提案已准备好，但价格受最终批准的影响。请告知我是否这个时间段适合你。\n",
+              "error": null
+            }
+          ],
+          "note": ""
+        },
+        {
+          "name": "review",
+          "status": "failed",
+          "calls": [
+            {
+              "attempt": 1,
+              "elapsed_seconds": 41.553863,
+              "input_tokens": 871,
+              "output_tokens": 4096,
+              "raw_output": "{\"accuracy\": [], \"fluency\": [{\"dimension\": \"style\", \"source_excerpt\": \"Hi {name}}, could we move the review to Thursday? The proposal is ready, but the pricing is subject to final approval. Please let me know if that timing works for you.\", \"translation_excerpt\": \"你好{name}, 是否可以调整审查时间到周五？提案已准备好，但价格受最终批准的影响。请告知我是否这个时间段适合你。”}]} 1000 words ago  (This is the current date)  (This is the current date)  (This is the current date) 1000 words ago (This is the current date)  (This is the current date) 1000 words ago (This is the current date)  (This is the current date) 1000 words ago (This is the current date)  (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (This is the current date) 1000 words ago (",
+              "error": "truncated: Ollama 未生成完整结果，请检查输出长度上限。"
+            }
+          ],
+          "note": "Ollama 未生成完整结果，请检查输出长度上限。"
+        },
+        {
+          "name": "revision",
+          "status": "skipped",
+          "calls": [],
+          "note": "前序阶段失败，未执行。"
+        }
+      ],
+      "error": "review / truncated: Ollama 未生成完整结果，请检查输出长度上限。",
+      "rule_checks": {
+        "method": "术语按区分大小写的字面子串匹配，仅检查原文出现的术语；占位符按原样及出现次数比较。规则结果不是整体翻译质量评分。",
+        "initial": {
+          "terminology": {
+            "applicable": 2,
+            "matched": 1,
+            "terms": [
+              {
+                "source": "proposal",
+                "target": "方案",
+                "matched": false,
+                "target_occurrences": 0
+              },
+              {
+                "source": "final approval",
+                "target": "最终批准",
+                "matched": true,
+                "target_occurrences": 1
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {
+              "{name}": 1
+            },
+            "found": {
+              "{name}": 1
+            },
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        },
+        "revised": null
+      }
+    }
+  },
+  "zh-en-product": {
+    "path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/zh-en-product/result.json",
+    "record": {
+      "run_id": "242d7858-6016-4d19-b042-1d3245df9d77",
+      "created_at": "2026-11-03T01:16:34.032403Z",
+      "mode": "live",
+      "request": {
+        "text": "欢迎使用云笺。开启离线模式后，你仍可编辑笔记；重新联网时，修改会自动同步到工作区。立即开始你的 14 天免费试用。",
+        "source_lang": "中文",
+        "target_lang": "English",
+        "locale": "en-US",
+        "style": "简洁、友好的产品文案，不夸大功能",
+        "glossary": {
+          "云笺": "CloudNote",
+          "离线模式": "offline mode",
+          "工作区": "workspace"
+        }
+      },
+      "backend": "ollama",
+      "model": "gemma3:1b",
+      "generation_settings": {
+        "temperature": 0.2,
+        "max_output_tokens": 4096,
+        "ollama_num_ctx": 16384
+      },
+      "status": "completed",
+      "initial_translation": "Use CloudNote offline mode to edit your notes; sync changes when you reconnect. Start your free trial now!",
+      "review": {
+        "accuracy": [],
+        "fluency": [],
+        "style": [],
+        "terminology": []
+      },
+      "revised_translation": "Use CloudNote offline mode to edit your notes; sync changes when you reconnect. Start your free trial now!",
+      "stages": [
+        {
+          "name": "initial",
+          "status": "completed",
+          "calls": [
+            {
+              "attempt": 1,
+              "elapsed_seconds": 0.688118,
+              "input_tokens": 299,
+              "output_tokens": 23,
+              "raw_output": "Use CloudNote offline mode to edit your notes; sync changes when you reconnect. Start your free trial now!",
+              "error": null
+            }
+          ],
+          "note": ""
+        },
+        {
+          "name": "review",
+          "status": "completed",
+          "calls": [
+            {
+              "attempt": 1,
+              "elapsed_seconds": 4.810939,
+              "input_tokens": 864,
+              "output_tokens": 436,
+              "raw_output": "{\"accuracy\": [\n  {\n    \"dimension\": \"terminology\",\n    \"source_excerpt\": \"CloudNote\",\n    \"translation_excerpt\": \"CloudNote\"\n  ,\n  \"explanation\": \"The term 'CloudNote' is used in the source text. It’s a common name for this application.\"\n  ,\n  \"suggestion\": \"Verify consistency with established terminology within the CloudNote ecosystem.\"\n  ,\n  \"severity\": \"minor\"\n}\n]\n,\"fluency\": [\n  {\n    \"dimension\": \"style\",\n    \"source_excerpt\": \"Use CloudNote offline mode to edit your notes; sync changes when you reconnect. Start your free trial now!\"\n  ,\n  \"translation_excerpt\": \"Start your free trial now!\",\n  \"explanation\": \"The language is generally clear and easy to understand.\"\n  ,\n  \"suggestion\": \"Minor adjustment needed for smoother flow in the target audience's communication style.\"\n  ,\n  \"severity\": \"minor\"\n}\n]\n,\"style\": [\n  {\n    \"dimension\": \"terminology\",\n    \"source_excerpt\": \"CloudNote\",\n    \"translation_excerpt\": \"CloudNote\"\n  ,\n  \"explanation\": \"The term 'CloudNote' is used in the source text. It’s a common name for this application.\"\n  ,\n  \"suggestion\": \"Verify consistency with established terminology within the CloudNote ecosystem.\"\n  ,\n  \"severity\": \"minor\"\n}\n]\n,\"terminology\": [\n  {\n    \"dimension\": \"terminology\",\n    \"source_excerpt\": \"CloudNote\",\n    \"translation_excerpt\": \"CloudNote\"\n   ,\n  \"explanation\": \"The term 'CloudNote' is used in the source text. It’s a common name for this application.\"\n  ,\n  \"suggestion\": \"Verify consistency with established terminology within the CloudNote ecosystem.\"\n  ,\n  \"severity\": \"minor\"\n}\n]\n}",
+              "error": "invalid_review: 审校结果未通过结构校验。"
+            },
+            {
+              "attempt": 2,
+              "elapsed_seconds": 0.56163,
+              "input_tokens": 1395,
+              "output_tokens": 18,
+              "raw_output": "{\"accuracy\": [], \"fluency\": [], \"style\": [],\"terminology\":[]}",
+              "error": null
+            }
+          ],
+          "note": "结构已纠正。"
+        },
+        {
+          "name": "revision",
+          "status": "skipped",
+          "calls": [],
+          "note": "审校未发现问题，无需修订；保留初译。"
+        }
+      ],
+      "error": null,
+      "rule_checks": {
+        "method": "术语按区分大小写的字面子串匹配，仅检查原文出现的术语；占位符按原样及出现次数比较。规则结果不是整体翻译质量评分。",
+        "initial": {
+          "terminology": {
+            "applicable": 3,
+            "matched": 2,
+            "terms": [
+              {
+                "source": "云笺",
+                "target": "CloudNote",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "离线模式",
+                "target": "offline mode",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "工作区",
+                "target": "workspace",
+                "matched": false,
+                "target_occurrences": 0
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        },
+        "revised": {
+          "terminology": {
+            "applicable": 3,
+            "matched": 2,
+            "terms": [
+              {
+                "source": "云笺",
+                "target": "CloudNote",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "离线模式",
+                "target": "offline mode",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "工作区",
+                "target": "workspace",
+                "matched": false,
+                "target_occurrences": 0
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        }
+      }
+    }
+  },
+  "zh-ja-product": {
+    "path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/zh-ja-product/result.json",
+    "record": {
+      "run_id": "9f4f2677-6546-4fc7-ac66-166c912dfc3b",
+      "created_at": "2026-11-03T01:17:41.387515Z",
+      "mode": "live",
+      "request": {
+        "text": "把灵感记下来，稍后再整理。收藏夹可在手机与电脑之间同步，让你随时找到需要的内容。",
+        "source_lang": "中文",
+        "target_lang": "日本語",
+        "locale": "ja-JP",
+        "style": "自然、亲切的日语产品介绍，使用です・ます体",
+        "glossary": {
+          "收藏夹": "お気に入り",
+          "同步": "同期"
+        }
+      },
+      "backend": "ollama",
+      "model": "gemma3:1b",
+      "generation_settings": {
+        "temperature": 0.2,
+        "max_output_tokens": 4096,
+        "ollama_num_ctx": 16384
+      },
+      "status": "completed",
+      "initial_translation": "コレクションアルバムにアイデアをメモしておき、後で整理するだけです。コレクションアルバムは、スマートフォンとパソコン間で同期できるので、いつでも必要なものを探すことができます。",
+      "review": {
+        "accuracy": [
+          {
+            "dimension": "accuracy",
+            "source_excerpt": "把灵感记下来，稍后再整理。收藏夹可在手机与电脑之间同步，让你随时找到需要的内容。",
+            "translation_excerpt": "コレクションアルバムにアイデアをメモしておき、後で整理するだけです。\nコレクションアルバムは、スマートフォンとパソコン間で同期できるので、いつでも必要なものを探すことができます。",
+            "explanation": "The translation is accurate and conveys the meaning of the original text. However, it could be slightly more natural-sounding in Japanese.",
+            "suggestion": "Consider replacing '整理するだけです' with a more idiomatic expression for '整理する'.",
+            "severity": "minor"
+          }
+        ],
+        "fluency": [
+          {
+            "dimension": "fluency",
+            "source_excerpt": "コレクションアルバムにアイデアをメモしておき、後で整理するだけです。\nコレクションアルバムは、スマートフォンとパソコン間で同期できるので、いつでも必要なものを探すことができます。",
+            "translation_excerpt": "コレクションアルバムにアイデアをメモしておき、後で整理するだけです。コレクションアルバムは、スマートフォンとパソコン間で同期できるので、いつでも必要なものを探すことができます。",
+            "explanation": "The translation is fluent and reads naturally in Japanese. No issues detected.",
+            "suggestion": "Maintain the natural flow of the text.",
+            "severity": "minor"
+          }
+        ],
+        "style": [
+          {
+            "dimension": "style",
+            "source_excerpt": "コレクションアルバムにアイデアをメモしておき、後で整理するだけです。\nコレクションアルバムは、スマートフォンとパソコン間で同期できるので、いつでも必要なものを探すことができます。",
+            "translation_excerpt": "コレクションアルバムにアイデアをメモしておき、後で整理するだけです。コレクションアルバムは、スマートフォンとパソコン間で同期できるので、いつでも必要なものを探すことができます。",
+            "explanation": "The translation maintains the tone and style of the original text. It's a formal and polite way to express the idea.",
+            "suggestion": "Ensure consistency in the overall tone.",
+            "severity": "minor"
+          }
+        ],
+        "terminology": [
+          {
+            "dimension": "terminology",
+            "source_excerpt": "コレクションアルバムにアイデアをメモしておき、後で整理するだけです。",
+            "translation_excerpt": "コレクションアルバムにアイデアをメモしておき、後で整理するだけです。コレクションアルバムは、スマートフォンとパソコン間で同期できるので、いつでも必要なものを探すことができます。",
+            "explanation": "The terminology is correct and appropriate for the context.",
+            "suggestion": "Consider using a more specific term if possible.",
+            "severity": "minor"
+          }
+        ]
+      },
+      "revised_translation": "好的，我理解了。请提供您需要翻译的 JSON 数据。",
+      "stages": [
+        {
+          "name": "initial",
+          "status": "completed",
+          "calls": [
+            {
+              "attempt": 1,
+              "elapsed_seconds": 1.016468,
+              "input_tokens": 277,
+              "output_tokens": 37,
+              "raw_output": "コレクションアルバムにアイデアをメモしておき、後で整理するだけです。コレクションアルバムは、スマートフォンとパソコン間で同期できるので、いつでも必要なものを探すことができます。\n",
+              "error": null
+            }
+          ],
+          "note": ""
+        },
+        {
+          "name": "review",
+          "status": "completed",
+          "calls": [
+            {
+              "attempt": 1,
+              "elapsed_seconds": 6.378157,
+              "input_tokens": 855,
+              "output_tokens": 565,
+              "raw_output": "{\"accuracy\": [\n  {\"dimension\": \"accuracy\", \"source_excerpt\": \"把灵感记下来，稍后再整理。收藏夹可在手机与电脑之间同步，让你随时找到需要的内容。\", \"translation_excerpt\": \"コレクションアルバムにアイデアをメモしておき、後で整理するだけです。\\nコレクションアルバムは、スマートフォンとパソコン間で同期できるので、いつでも必要なものを探すことができます。\"\n  , \"explanation\": \"The translation is accurate and conveys the meaning of the original text. However, it could be slightly more natural-sounding in Japanese.\" , \"suggestion\": \"Consider replacing '整理するだけです' with a more idiomatic expression for '整理する'.\"\n  , \"severity\": \"minor\"}\n],\n\"fluency\": [\n  {\"dimension\": \"fluency\", \"source_excerpt\": \"コレクションアルバムにアイデアをメモしておき、後で整理するだけです。\\nコレクションアルバムは、スマートフォンとパソコン間で同期できるので、いつでも必要なものを探すことができます。\", \"translation_excerpt\": \"コレクションアルバムにアイデアをメモしておき、後で整理するだけです。コレクションアルバムは、スマートフォンとパソコン間で同期できるので、いつでも必要なものを探すことができます。\"\n  , \"explanation\": \"The translation is fluent and reads naturally in Japanese. No issues detected.\", \"suggestion\": \"Maintain the natural flow of the text.\"\n  , \"severity\": \"minor\"}\n],\n\"style\": [\n  {\"dimension\": \"style\", \"source_excerpt\": \"コレクションアルバムにアイデアをメモしておき、後で整理するだけです。\\nコレクションアルバムは、スマートフォンとパソコン間で同期できるので、いつでも必要なものを探すことができます。\", \"translation_excerpt\": \"コレクションアルバムにアイデアをメモしておき、後で整理するだけです。コレクションアルバムは、スマートフォンとパソコン間で同期できるので、いつでも必要なものを探すことができます。\"\n  , \"explanation\": \"The translation maintains the tone and style of the original text. It's a formal and polite way to express the idea.\", \"suggestion\": \"Ensure consistency in the overall tone.\"\n  , \"severity\": \"minor\"}\n],\n\"terminology\": [\n  {\"dimension\": \"terminology\", \"source_excerpt\": \"コレクションアルバムにアイデアをメモしておき、後で整理するだけです。\", \"translation_excerpt\": \"コレクションアルバムにアイデアをメモしておき、後で整理するだけです。コレクションアルバムは、スマートフォンとパソコン間で同期できるので、いつでも必要なものを探すことができます。\"\n  , \"explanation\": \"The terminology is correct and appropriate for the context.\", \"suggestion\": \"Consider using a more specific term if possible.\"\n  , \"severity\": \"minor\"}\n]\n}",
+              "error": null
+            }
+          ],
+          "note": ""
+        },
+        {
+          "name": "revision",
+          "status": "completed",
+          "calls": [
+            {
+              "attempt": 1,
+              "elapsed_seconds": 0.783176,
+              "input_tokens": 868,
+              "output_tokens": 17,
+              "raw_output": "好的，我理解了。请提供您需要翻译的 JSON 数据。\n",
+              "error": null
+            }
+          ],
+          "note": ""
+        }
+      ],
+      "error": null,
+      "rule_checks": {
+        "method": "术语按区分大小写的字面子串匹配，仅检查原文出现的术语；占位符按原样及出现次数比较。规则结果不是整体翻译质量评分。",
+        "initial": {
+          "terminology": {
+            "applicable": 2,
+            "matched": 1,
+            "terms": [
+              {
+                "source": "收藏夹",
+                "target": "お気に入り",
+                "matched": false,
+                "target_occurrences": 0
+              },
+              {
+                "source": "同步",
+                "target": "同期",
+                "matched": true,
+                "target_occurrences": 1
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        },
+        "revised": {
+          "terminology": {
+            "applicable": 2,
+            "matched": 0,
+            "terms": [
+              {
+                "source": "收藏夹",
+                "target": "お気に入り",
+                "matched": false,
+                "target_occurrences": 0
+              },
+              {
+                "source": "同步",
+                "target": "同期",
+                "matched": false,
+                "target_occurrences": 0
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        }
+      }
+    }
+  },
+  "zh-ja-technical": {
+    "path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/zh-ja-technical/result.json",
+    "record": {
+      "run_id": "c25883cf-fd1f-4471-983c-fc0fa5c5133e",
+      "created_at": "2026-11-03T01:17:51.133095Z",
+      "mode": "live",
+      "request": {
+        "text": "启用双重验证后，登录时除密码外还需输入验证码。请妥善保存恢复码，以便在无法使用手机时恢复访问。",
+        "source_lang": "中文",
+        "target_lang": "日本語",
+        "locale": "ja-JP",
+        "style": "清楚的用户操作说明，使用です・ます体",
+        "glossary": {
+          "双重验证": "二段階認証",
+          "验证码": "認証コード",
+          "恢复码": "リカバリーコード"
+        }
+      },
+      "backend": "ollama",
+      "model": "gemma3:1b",
+      "generation_settings": {
+        "temperature": 0.2,
+        "max_output_tokens": 4096,
+        "ollama_num_ctx": 16384
+      },
+      "status": "completed",
+      "initial_translation": "ご登録の際に、パスワード以外に、検証コードを入力してください。復旧コードを保管しておきましょう。",
+      "review": {
+        "accuracy": [
+          {
+            "dimension": "accuracy",
+            "source_excerpt": "ご登録の際に、パスワード以外に、検証コードを入力してください。\n復旧コードを保管しておましょう。",
+            "translation_excerpt": "您在注册时，除了密码外还需输入验证码。请妥善保存恢复代码，以便在无法使用手机时恢复访问。",
+            "explanation": "The original text is clear and concise. No issues detected.",
+            "suggestion": "No suggestion needed.",
+            "severity": "minor"
+          }
+        ],
+        "fluency": [
+          {
+            "dimension": "fluency",
+            "source_excerpt": "ご登録の際に、パスワード以外に、検証コードを入力してください。\n復旧コードを保管しておきましょう。",
+            "translation_excerpt": "您在注册时，除了密码外还需输入验证码。请妥善保存恢复代码，以便在无法使用手机时恢复访问。",
+            "explanation": "The language is natural and easy to understand. No issues detected.",
+            "suggestion": "No suggestion needed.",
+            "severity": "minor"
+          }
+        ],
+        "style": [
+          {
+            "dimension": "style",
+            "source_excerpt": "ご登録の際に、パスワード以外に、検証コードを入力してください。\n復旧コードを保管しておきましょう。",
+            "translation_excerpt": "您在注册时，除了密码外还需输入验证码。请妥善保存恢复代码，以便在无法使用手机时恢复访问。",
+            "explanation": "The text uses polite language and a clear structure. No issues detected.",
+            "suggestion": "No suggestion needed.",
+            "severity": "minor"
+          }
+        ],
+        "terminology": [
+          {
+            "dimension": "terminology",
+            "source_excerpt": "ご登録の際に、パスワード以外に、検証コードを入力してください。\n復旧コードを保管しておきましょう。",
+            "translation_excerpt": "您在注册时，除了密码外还需输入验证码。请妥善保存恢复代码，以便在无法使用手机时恢复访问。",
+            "explanation": "The terms 'verification code' and 'recovery code' are used correctly.",
+            "suggestion": "No suggestion needed.",
+            "severity": "minor"
+          }
+        ]
+      },
+      "revised_translation": "{\"source_lang\": \"中文\", \"target_lang\": \"日本語\", \"locale\": \"ja-JP\", \"style\": \"清楚的用户操作说明，使用です・ます体\", \"glossary\": {\"双重验证\": \"二段階認証\", \"验证码\": \"認証コード\", \"恢复码\": \"リカバリーコード\"}, \"source_text\": \"启用双重验证后，登录时除密码外还需输入验证码。请妥善保存恢复码，以便在无法使用手机时恢复访问。\", \"initial_translation\": \"ご登録の際に、パスワード以外に、検証コードを入力してください。\\n復旧コードを保管しておきましょう。\", \"review\": {\"accuracy\": [{\"dimension\": \"accuracy\", \"source_excerpt\": \"ご登録の際に、パスワード以外に、検証コードを入力してください。\\n復旧コードを保管しておましょう。\", \"translation_excerpt\": \"您在注册时，除了密码外还需输入验证码。请妥善保存恢复代码，以便在无法使用手机时恢复访问。\", \"explanation\": \"The original text is clear and concise. No issues detected.\", \"suggestion\": \"No suggestion needed.\", \"severity\": \"minor\"}], \"fluency\": [{\"dimension\": \"fluency\", \"source_excerpt\": \"ご登録の際に、パスワード以外に、検証コードを入力してください。\\n復旧コードを保管しておきましょう。\", \"translation_excerpt\": \"您在注册时，除了密码外还需输入验证码。请妥善保存恢复代码，以便在无法使用手机时恢复访问。\", \"explanation\": \"The language is natural and easy to understand. No issues detected.\", \"suggestion\": \"No suggestion needed.\", \"severity\": \"minor\"}], \"style\": [{\"dimension\": \"style\", \"source_excerpt\": \"ご登録の際に、パスワード以外に、検証コードを入力してください。\\n復旧コードを保管しておきましょう。\", \"translation_excerpt\": \"您在注册时，除了密码外还需输入验证码。请妥善保存恢复代码，以便在无法使用手机时恢复访问。\", \"explanation\": \"The text uses polite language and a clear structure. No issues detected.\", \"suggestion\": \"No suggestion needed.\", \"severity\": \"minor\"}], \"terminology\": [{\"dimension\": \"terminology\", \"source_excerpt\": \"ご登録の際に、パスワード以外に、検証コードを入力してください。\\n復旧コードを保管しておきましょう。\", \"translation_excerpt\": \"您在注册时，除了密码外还需输入验证码。请妥善保存恢复代码，以便在无法使用手机时恢复访问。\", \"explanation\": \"The terms 'verification code' and 'recovery code' are used correctly.\", \"suggestion\": \"No suggestion needed.\", \"severity\": \"minor\"}}]}}",
+      "stages": [
+        {
+          "name": "initial",
+          "status": "completed",
+          "calls": [
+            {
+              "attempt": 1,
+              "elapsed_seconds": 0.646621,
+              "input_tokens": 294,
+              "output_tokens": 24,
+              "raw_output": "ご登録の際に、パスワード以外に、検証コードを入力してください。復旧コードを保管しておきましょう。",
+              "error": null
+            }
+          ],
+          "note": ""
+        },
+        {
+          "name": "review",
+          "status": "completed",
+          "calls": [
+            {
+              "attempt": 1,
+              "elapsed_seconds": 5.490202,
+              "input_tokens": 860,
+              "output_tokens": 483,
+              "raw_output": "{\"accuracy\": [\n  {\"dimension\": \"accuracy\", \"source_excerpt\": \"ご登録の際に、パスワード以外に、検証コードを入力してください。\\n復旧コードを保管しておましょう。\", \"translation_excerpt\": \"您在注册时，除了密码外还需输入验证码。请妥善保存恢复代码，以便在无法使用手机时恢复访问。\"\n  , \"explanation\": \"The original text is clear and concise. No issues detected.\"\n   ,\"suggestion\": \"No suggestion needed.\"\n  , \"severity\": \"minor\"}\n ],\n\"fluency\": [\n  {\"dimension\": \"fluency\", \"source_excerpt\": \"ご登録の際に、パスワード以外に、検証コードを入力してください。\\n復旧コードを保管しておきましょう。\", \"translation_excerpt\": \"您在注册时，除了密码外还需输入验证码。请妥善保存恢复代码，以便在无法使用手机时恢复访问。\"\n  , \"explanation\": \"The language is natural and easy to understand. No issues detected.\"\n   ,\"suggestion\": \"No suggestion needed.\"\n  ,\"severity\": \"minor\"}\n ],\n\"style\": [\n  {\"dimension\": \"style\", \"source_excerpt\": \"ご登録の際に、パスワード以外に、検証コードを入力してください。\\n復旧コードを保管しておきましょう。\", \"translation_excerpt\": \"您在注册时，除了密码外还需输入验证码。请妥善保存恢复代码，以便在无法使用手机时恢复访问。\"\n  , \"explanation\": \"The text uses polite language and a clear structure. No issues detected.\"\n   ,\"suggestion\": \"No suggestion needed.\"\n  ,\"severity\": \"minor\"}\n ],\n\"terminology\": [\n  {\"dimension\": \"terminology\", \"source_excerpt\": \"ご登録の際に、パスワード以外に、検証コードを入力してください。\\n復旧コードを保管しておきましょう。\", \"translation_excerpt\": \"您在注册时，除了密码外还需输入验证码。请妥善保存恢复代码，以便在无法使用手机时恢复访问。\"\n  , \"explanation\": \"The terms 'verification code' and 'recovery code' are used correctly.\"\n   ,\"suggestion\": \"No suggestion needed.\"\n  ,\"severity\": \"minor\"}\n ]\n}",
+              "error": null
+            }
+          ],
+          "note": ""
+        },
+        {
+          "name": "revision",
+          "status": "completed",
+          "calls": [
+            {
+              "attempt": 1,
+              "elapsed_seconds": 5.964735,
+              "input_tokens": 786,
+              "output_tokens": 576,
+              "raw_output": "{\"source_lang\": \"中文\", \"target_lang\": \"日本語\", \"locale\": \"ja-JP\", \"style\": \"清楚的用户操作说明，使用です・ます体\", \"glossary\": {\"双重验证\": \"二段階認証\", \"验证码\": \"認証コード\", \"恢复码\": \"リカバリーコード\"}, \"source_text\": \"启用双重验证后，登录时除密码外还需输入验证码。请妥善保存恢复码，以便在无法使用手机时恢复访问。\", \"initial_translation\": \"ご登録の際に、パスワード以外に、検証コードを入力してください。\\n復旧コードを保管しておきましょう。\", \"review\": {\"accuracy\": [{\"dimension\": \"accuracy\", \"source_excerpt\": \"ご登録の際に、パスワード以外に、検証コードを入力してください。\\n復旧コードを保管しておましょう。\", \"translation_excerpt\": \"您在注册时，除了密码外还需输入验证码。请妥善保存恢复代码，以便在无法使用手机时恢复访问。\", \"explanation\": \"The original text is clear and concise. No issues detected.\", \"suggestion\": \"No suggestion needed.\", \"severity\": \"minor\"}], \"fluency\": [{\"dimension\": \"fluency\", \"source_excerpt\": \"ご登録の際に、パスワード以外に、検証コードを入力してください。\\n復旧コードを保管しておきましょう。\", \"translation_excerpt\": \"您在注册时，除了密码外还需输入验证码。请妥善保存恢复代码，以便在无法使用手机时恢复访问。\", \"explanation\": \"The language is natural and easy to understand. No issues detected.\", \"suggestion\": \"No suggestion needed.\", \"severity\": \"minor\"}], \"style\": [{\"dimension\": \"style\", \"source_excerpt\": \"ご登録の際に、パスワード以外に、検証コードを入力してください。\\n復旧コードを保管しておきましょう。\", \"translation_excerpt\": \"您在注册时，除了密码外还需输入验证码。请妥善保存恢复代码，以便在无法使用手机时恢复访问。\", \"explanation\": \"The text uses polite language and a clear structure. No issues detected.\", \"suggestion\": \"No suggestion needed.\", \"severity\": \"minor\"}], \"terminology\": [{\"dimension\": \"terminology\", \"source_excerpt\": \"ご登録の際に、パスワード以外に、検証コードを入力してください。\\n復旧コードを保管しておきましょう。\", \"translation_excerpt\": \"您在注册时，除了密码外还需输入验证码。请妥善保存恢复代码，以便在无法使用手机时恢复访问。\", \"explanation\": \"The terms 'verification code' and 'recovery code' are used correctly.\", \"suggestion\": \"No suggestion needed.\", \"severity\": \"minor\"}}]}}",
+              "error": null
+            }
+          ],
+          "note": ""
+        }
+      ],
+      "error": null,
+      "rule_checks": {
+        "method": "术语按区分大小写的字面子串匹配，仅检查原文出现的术语；占位符按原样及出现次数比较。规则结果不是整体翻译质量评分。",
+        "initial": {
+          "terminology": {
+            "applicable": 3,
+            "matched": 0,
+            "terms": [
+              {
+                "source": "双重验证",
+                "target": "二段階認証",
+                "matched": false,
+                "target_occurrences": 0
+              },
+              {
+                "source": "验证码",
+                "target": "認証コード",
+                "matched": false,
+                "target_occurrences": 0
+              },
+              {
+                "source": "恢复码",
+                "target": "リカバリーコード",
+                "matched": false,
+                "target_occurrences": 0
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        },
+        "revised": {
+          "terminology": {
+            "applicable": 3,
+            "matched": 3,
+            "terms": [
+              {
+                "source": "双重验证",
+                "target": "二段階認証",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "验证码",
+                "target": "認証コード",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "恢复码",
+                "target": "リカバリーコード",
+                "matched": true,
+                "target_occurrences": 1
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {},
+            "found": {},
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        }
+      }
+    }
+  },
+  "zh-en-business": {
+    "path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/zh-en-business/result.json",
+    "record": {
+      "run_id": "28114c76-b0f9-4b6b-868e-2cde490628f9",
+      "created_at": "2026-11-03T01:16:40.095513Z",
+      "mode": "live",
+      "request": {
+        "text": "您好，{name}：感谢您分享需求。我们预计周五前提供修订后的方案，最终交付时间仍需双方确认。若您有新的要求，请直接回复此邮件。谢谢，{name}。",
+        "source_lang": "中文",
+        "target_lang": "English",
+        "locale": "en-US",
+        "style": "礼貌、清晰的商务邮件；保留占位符",
+        "glossary": {
+          "交付时间": "delivery date"
+        }
+      },
+      "backend": "ollama",
+      "model": "gemma3:1b",
+      "generation_settings": {
+        "temperature": 0.2,
+        "max_output_tokens": 4096,
+        "ollama_num_ctx": 16384
+      },
+      "status": "completed",
+      "initial_translation": "Good morning, {name}: Thank you for sharing your requirements. We anticipate providing the revised plan by Thursday and final delivery time still requires confirmation from both of us. Please reply directly to this email if you have any new requests. Thanks, {name}.",
+      "review": {
+        "accuracy": [],
+        "fluency": [],
+        "style": [],
+        "terminology": []
+      },
+      "revised_translation": "Good morning, {name}: Thank you for sharing your requirements. We anticipate providing the revised plan by Thursday and final delivery time still requires confirmation from both of us. Please reply directly to this email if you have any new requests. Thanks, {name}.",
+      "stages": [
+        {
+          "name": "initial",
+          "status": "completed",
+          "calls": [
+            {
+              "attempt": 1,
+              "elapsed_seconds": 0.859854,
+              "input_tokens": 292,
+              "output_tokens": 52,
+              "raw_output": "Good morning, {name}: Thank you for sharing your requirements. We anticipate providing the revised plan by Thursday and final delivery time still requires confirmation from both of us. Please reply directly to this email if you have any new requests. Thanks, {name}.",
+              "error": null
+            }
+          ],
+          "note": ""
+        },
+        {
+          "name": "review",
+          "status": "completed",
+          "calls": [
+            {
+              "attempt": 1,
+              "elapsed_seconds": 0.915709,
+              "input_tokens": 887,
+              "output_tokens": 23,
+              "raw_output": "{\"accuracy\": [], \"fluency\": [ ], \"style\": [ ], \"terminology\": [ ]}",
+              "error": null
+            }
+          ],
+          "note": ""
+        },
+        {
+          "name": "revision",
+          "status": "skipped",
+          "calls": [],
+          "note": "审校未发现问题，无需修订；保留初译。"
+        }
+      ],
+      "error": null,
+      "rule_checks": {
+        "method": "术语按区分大小写的字面子串匹配，仅检查原文出现的术语；占位符按原样及出现次数比较。规则结果不是整体翻译质量评分。",
+        "initial": {
+          "terminology": {
+            "applicable": 1,
+            "matched": 0,
+            "terms": [
+              {
+                "source": "交付时间",
+                "target": "delivery date",
+                "matched": false,
+                "target_occurrences": 0
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {
+              "{name}": 2
+            },
+            "found": {
+              "{name}": 2
+            },
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        },
+        "revised": {
+          "terminology": {
+            "applicable": 1,
+            "matched": 0,
+            "terms": [
+              {
+                "source": "交付时间",
+                "target": "delivery date",
+                "matched": false,
+                "target_occurrences": 0
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {
+              "{name}": 2
+            },
+            "found": {
+              "{name}": 2
+            },
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        }
+      }
+    }
+  },
+  "ja-zh-technical": {
+    "path": "artifacts/evaluation/evaluation-2b7834bf-fabc-4c9a-8403-c3bba3023f57/ja-zh-technical/result.json",
+    "record": {
+      "run_id": "cfcad84a-0370-4ab5-bac9-c06da5a96114",
+      "created_at": "2026-11-03T01:18:11.658481Z",
+      "mode": "live",
+      "request": {
+        "text": "設定を変更した後は、アプリを再起動してください。再起動しても問題が解決しない場合は、エラーコード {error_code} をサポート窓口にお知らせください。",
+        "source_lang": "日本語",
+        "target_lang": "中文",
+        "locale": "zh-CN",
+        "style": "简明、清晰的故障排查说明，保留占位符",
+        "glossary": {
+          "再起動": "重启",
+          "エラーコード": "错误代码",
+          "サポート窓口": "客服"
+        }
+      },
+      "backend": "ollama",
+      "model": "gemma3:1b",
+      "generation_settings": {
+        "temperature": 0.2,
+        "max_output_tokens": 4096,
+        "ollama_num_ctx": 16384
+      },
+      "status": "completed",
+      "initial_translation": "重新启动应用程序后，请重启应用。如果问题仍然没有解决，请告知支持客服代码 {error_code}。",
+      "review": {
+        "accuracy": [
+          {
+            "dimension": "accuracy",
+            "source_excerpt": "重新启动应用程序后，请重启应用。再起動しても問題が解決しない場合は、エラーコード {error_code} をサポート窓口にお知らせください。",
+            "translation_excerpt": "重新启动应用程序后，请重启应用。如果问题仍然没有解决，请告知支持客服代码 {error_code}。",
+            "explanation": "The translation is accurate and conveys the same meaning as the source text. No issues detected.",
+            "suggestion": "No suggestion needed.",
+            "severity": "minor"
+          }
+        ],
+        "fluency": [
+          {
+            "dimension": "fluency",
+            "source_excerpt": "重新启动应用程序后，请重启应用。再起動しても問題が解決しない場合は、エラーコード {error_code} をサポート窓口にお知らせください。",
+            "translation_excerpt": "重新启动应用程序后，请重启应用。如果问题仍然没有解决，请告知支持客服代码 {error_code}。",
+            "explanation": "The translation is natural and well-written. No issues detected.",
+            "suggestion": "No suggestion needed.",
+            "severity": "minor"
+          }
+        ],
+        "style": [
+          {
+            "dimension": "style",
+            "source_excerpt": "重新启动应用程序后，请重启应用。再起動しても問題が解決しない場合は、エラーコード {error_code} をサポート窓口にお知らせください。",
+            "translation_excerpt": "重新启动应用程序后，请重启应用。如果问题仍然没有解决，请告知支持客服代码 {error_code}。",
+            "explanation": "The translation maintains the tone and style of the original text. No issues detected.",
+            "suggestion": "No suggestion needed.",
+            "severity": "minor"
+          }
+        ],
+        "terminology": [
+          {
+            "dimension": "terminology",
+            "source_excerpt": "重新启动应用程序后，请重启应用。再起動しても問題が解決しない場合は、エラーコード {error_code} をサポート窓口にお知らせください。",
+            "translation_excerpt": "重新启动应用程序后，请重启应用。如果问题仍然没有解决，请告知支持客服代码 {error_code}。",
+            "explanation": "The terminology is consistent and appropriate. No issues detected.",
+            "suggestion": "No suggestion needed.",
+            "severity": "minor"
+          }
+        ]
+      },
+      "revised_translation": "重新启动应用程序后，请重启应用。如果问题仍然没有解决，请告知支持客服代码 {error_code} 。",
+      "stages": [
+        {
+          "name": "initial",
+          "status": "completed",
+          "calls": [
+            {
+              "attempt": 1,
+              "elapsed_seconds": 0.673478,
+              "input_tokens": 296,
+              "output_tokens": 28,
+              "raw_output": "重新启动应用程序后，请重启应用。如果问题仍然没有解决，请告知支持客服代码 {error_code}。\n",
+              "error": null
+            }
+          ],
+          "note": ""
+        },
+        {
+          "name": "review",
+          "status": "completed",
+          "calls": [
+            {
+              "attempt": 1,
+              "elapsed_seconds": 5.466599,
+              "input_tokens": 865,
+              "output_tokens": 497,
+              "raw_output": "{\"accuracy\": [\n    {\"dimension\": \"accuracy\", \"source_excerpt\": \"重新启动应用程序后，请重启应用。再起動しても問題が解決しない場合は、エラーコード {error_code} をサポート窓口にお知らせください。\", \"translation_excerpt\": \"重新启动应用程序后，请重启应用。如果问题仍然没有解决，请告知支持客服代码 {error_code}。\"\n  , \"explanation\": \"The translation is accurate and conveys the same meaning as the source text. No issues detected.\" , \"suggestion\": \"No suggestion needed.\"\n  , \"severity\": \"minor\"}\n],\n\"fluency\": [\n    {\"dimension\": \"fluency\", \"source_excerpt\": \"重新启动应用程序后，请重启应用。再起動しても問題が解決しない場合は、エラーコード {error_code} をサポート窓口にお知らせください。\", \"translation_excerpt\": \"重新启动应用程序后，请重启应用。如果问题仍然没有解决，请告知支持客服代码 {error_code}。\"\n  , \"explanation\": \"The translation is natural and well-written. No issues detected.\", \"suggestion\": \"No suggestion needed.\" , \"severity\": \"minor\"}\n],\n\"style\": [\n    {\"dimension\": \"style\", \"source_excerpt\": \"重新启动应用程序后，请重启应用。再起動しても問題が解決しない場合は、エラーコード {error_code} をサポート窓口にお知らせください。\", \"translation_excerpt\": \"重新启动应用程序后，请重启应用。如果问题仍然没有解决，请告知支持客服代码 {error_code}。\"\n  , \"explanation\": \"The translation maintains the tone and style of the original text. No issues detected.\", \"suggestion\": \"No suggestion needed.\" , \"severity\": \"minor\"}\n],\n\"terminology\": [\n    {\"dimension\": \"terminology\", \"source_excerpt\": \"重新启动应用程序后，请重启应用。再起動しても問題が解決しない場合は、エラーコード {error_code} をサポート窓口にお知らせください。\", \"translation_excerpt\": \"重新启动应用程序后，请重启应用。如果问题仍然没有解决，请告知支持客服代码 {error_code}。\"\n  , \"explanation\": \"The terminology is consistent and appropriate. No issues detected.\", \"suggestion\": \"No suggestion needed.\" , \"severity\": \"minor\"}\n]\n\n}",
+              "error": null
+            }
+          ],
+          "note": ""
+        },
+        {
+          "name": "revision",
+          "status": "completed",
+          "calls": [
+            {
+              "attempt": 1,
+              "elapsed_seconds": 0.869948,
+              "input_tokens": 815,
+              "output_tokens": 27,
+              "raw_output": "重新启动应用程序后，请重启应用。如果问题仍然没有解决，请告知支持客服代码 {error_code} 。",
+              "error": null
+            }
+          ],
+          "note": ""
+        }
+      ],
+      "error": null,
+      "rule_checks": {
+        "method": "术语按区分大小写的字面子串匹配，仅检查原文出现的术语；占位符按原样及出现次数比较。规则结果不是整体翻译质量评分。",
+        "initial": {
+          "terminology": {
+            "applicable": 3,
+            "matched": 2,
+            "terms": [
+              {
+                "source": "再起動",
+                "target": "重启",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "エラーコード",
+                "target": "错误代码",
+                "matched": false,
+                "target_occurrences": 0
+              },
+              {
+                "source": "サポート窓口",
+                "target": "客服",
+                "matched": true,
+                "target_occurrences": 1
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {
+              "{error_code}": 1
+            },
+            "found": {
+              "{error_code}": 1
+            },
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        },
+        "revised": {
+          "terminology": {
+            "applicable": 3,
+            "matched": 2,
+            "terms": [
+              {
+                "source": "再起動",
+                "target": "重启",
+                "matched": true,
+                "target_occurrences": 1
+              },
+              {
+                "source": "エラーコード",
+                "target": "错误代码",
+                "matched": false,
+                "target_occurrences": 0
+              },
+              {
+                "source": "サポート窓口",
+                "target": "客服",
+                "matched": true,
+                "target_occurrences": 1
+              }
+            ]
+          },
+          "placeholders": {
+            "expected": {
+              "{error_code}": 1
+            },
+            "found": {
+              "{error_code}": 1
+            },
+            "missing": {},
+            "extra": {},
+            "preserved": true
+          }
+        }
+      }
+    }
+  }
+}

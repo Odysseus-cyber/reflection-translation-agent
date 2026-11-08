@@ -1,0 +1,67 @@
+[
+  {
+    "id": "zh-en-product",
+    "A": "revised_translation",
+    "B": "initial_translation"
+  },
+  {
+    "id": "zh-en-business",
+    "A": "revised_translation",
+    "B": "initial_translation"
+  },
+  {
+    "id": "zh-en-technical",
+    "A": "initial_translation",
+    "B": "revised_translation"
+  },
+  {
+    "id": "en-zh-product",
+    "A": "revised_translation",
+    "B": "initial_translation"
+  },
+  {
+    "id": "en-zh-technical",
+    "A": "revised_translation",
+    "B": "initial_translation"
+  },
+  {
+    "id": "zh-ja-product",
+    "A": "initial_translation",
+    "B": "revised_translation"
+  },
+  {
+    "id": "zh-ja-business",
+    "A": "revised_translation",
+    "B": "initial_translation"
+  },
+  {
+    "id": "zh-ja-technical",
+    "A": "initial_translation",
+    "B": "revised_translation"
+  },
+  {
+    "id": "ja-zh-product",
+    "A": "revised_translation",
+    "B": "initial_translation"
+  },
+  {
+    "id": "ja-zh-business",
+    "A": "revised_translation",
+    "B": "initial_translation"
+  },
+  {
+    "id": "ja-zh-technical",
+    "A": "initial_translation",
+    "B": "revised_translation"
+  },
+  {
+    "id": "locale-en-us",
+    "A": "revised_translation",
+    "B": "initial_translation"
+  },
+  {
+    "id": "locale-en-gb",
+    "A": "revised_translation",
+    "B": "initial_translation"
+  }
+]
