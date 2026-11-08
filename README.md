@@ -2,6 +2,18 @@
 
 基于 Andrew Ng 的 Translation Agent 原型，将“初译—审校—修订”做成可运行、可追踪的短文本翻译工作台。支持兼容 Chat Completions 的模型服务及本地 Ollama；中文 Gradio 界面与 CLI 共享同一流程。
 
+## 界面预览
+
+以下截图来自平台的“预置流程示例”，内容为手工预置，展示初译、四维审校、修订对照和报告导出。
+
+**平台工作台**
+
+![预置流程示例的平台工作台](docs/workbench-preview.jpg)
+
+**四维审校与引用核对**
+
+![预置流程示例的四维审校与引用核对](docs/review-evidence-preview.jpg)
+
 ## 快速启动
 
 需要 Python 3.12 和 uv。在本目录执行：
